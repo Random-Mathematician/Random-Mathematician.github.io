@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML and CSS tag reference</title>
+    <link rel="icon" href="icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {background-color:#0F0F1F;color:#EDEEFF}
+      h1, h2, h3, p {color:#EDEEFF;}
+      h1 {text-align:center;padding:10px;background-color:#292A4B;}
+      h2, h3 {clear:left;margin-left:10px;margin-bottom:10px;}
+      table {color:#EDEEFF;padding:5px;margin:20px;padding-top:0px;margin-top:0px;}
+      .conttable {background-color:#292A4B;border:1px solid #EDEEFF;float:left;}
+      table, tr, th, td {border:1px solid #EDEEFF;border-collapse:collapse;}
+      th, td {padding-left:7px;padding-right:7px;padding-top:2px;padding-bottom:2px;}
+      .theader {font-size:18px;background-color: #292A4B;}
+      .teven {background-color:#00001F;}
+      .todd {background-color:#0F0F2F;}
+      .tnope {display:none;}
+      .tunfinished {background-color:#202020;color:#9999A5;}
+      a:link {color:#EDEEFF;}
+      a:visited {color:#BEBECA;}
+      a:hover {color:#9999A5;}
+      a:active {color:#7F7FFF;}
+      .buttonlist {display:flex;margin:0px 0px 10px 10px;}
+      .buttonlist div {margin:0px 0px 0px 10px;padding:0px;}
+      .buttonlist div button {margin:0px;float:left;padding:3px 6px;}
+      .sel {background-color:#0f204f;border:none;cursor:pointer;color:#BEBECA;}
+      .sel:hover {background-color:#1f204f}
+      .sel:active {border:1px groove #9999A5;}
+      .selected {background-color:#2f204f;color:#EDEEFF;border:1px solid #EDEEFF}
+    </style>
+  </head>
+  <body>
+    <h1>HTML and CSS tag reference</h1>
+    <div class="conttable">
+      <h3 style="color:#EDEEFF;margin-left:5px;margin-right:5px">
+        Table of Contents</h3>
+      <ol>
+        <li><a href="#Ch1">HTML tags</a></li>
+        <li><a href="#Ch2">CSS properties</a></li>
+      </ol>
+    </div>
+    <h2 id="Ch1">HTML tags</h2>
+    <div class="buttonlist">
+      Elements to show:
+      <div>
+        <button class="sel" onclick="select(0)">All</button>
+        <button class="sel" onclick="select(1)">Block</button>
+        <button class="sel" onclick="select(2)">Inline</button>
+        <button class="sel" onclick="select(3)">Not displayed</button>
+        <button class="sel" onclick="select(4)">Table</button>
+        <button class="sel" onclick="select(5)">Listings</button>
+        <button class="sel" onclick="select(6)">Formatting</button>
+        <button class="sel" onclick="select(7)">Form</button>
+        <button class="sel" onclick="select(8)">Media</button>
+        <button class="sel" onclick="select(9)">Page content</button>
+      </div>
+    </div>
+    <table id="htmltags">
+      <thead>
+      <tr class="theader">
+        <th>Name</th>
+        <th>Tag</th>
+        <th>Description</th>
+        <th>Attributes</th>
+      </tr>
+      </thead>
+      <tbody id="htmltagsbody">
+      <tr class="t1none">
+        <td>Comment</td>
+        <td>&lt;!--...--&gt;</td>
+        <td colspan="2">Inserts a comment in-code which is not displayed nor executed.</td>
+      </tr>
+      <tr class="t1none">
+        <td>Declaration</td>
+        <td>&lt;!DOCTYPE&gt;</td>
+        <td>At the start of every file, identifies the document type as HTML.</td>
+        <td>html (HTML5)</td>
+      </tr>
+      <tr class="t1inline">
+        <td>Anchor</td>
+        <td>&lt;a&gt;</td>
+        <td>Defines a hyperlink to open the page <i>href</i> (in language <i>hreflang</i> and of
+          type <i>rel</i> relative to the current page; MIME type <i>type</i>) at location
+          <i>target</i> or download <i>download</i> to the user's device. The content is optimized
+          for <i>media</i>.<br>When clicked, the URL(s) <i>ping</i> are sent a background HTTP POST
+          request as a tracking measure and <i>referrerpolicy</i> is sent to the destination page.
+        </td>
+        <td>download<br>
+          href<br>
+          hreflang<br>
+          media<br>
+          ping<br>
+          referrerpolicy<br>
+          rel<br>
+          target<br>
+          type<br>
+          Globals</td>
+      </tr>
+      <tr class="t1inline t1format">
+        <td>Abbreviation</td>
+        <td>&lt;abbr&gt;</td>
+        <td>An abbreviation, which will display <i>title</i> when hovered.<br>
+          By default, it has a dotted underline.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1block t1format t1page">
+        <td>Adress</td>
+        <td>&lt;adress&gt;</td>
+        <td>Contains contact information for the article's author in a block.<br>
+          By default, it is italized.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1none t1media">
+        <td>Area</td>
+        <td>&lt;area&gt;</td>
+        <td>Used inside &lt;map&gt;, it defines a clickable area inside an image.<br>
+          Depending on <i>shape</i>, the area may be a rectangle, circle or polygon determined by
+          <i>coords</i>. When clicked, it will open the page <i>href</i> at location <i>target</i>
+          or download <i>download</i> to the user's device, according to attributes <i>hreflang</i>,
+          <i>rel</i>, <i>type</i>, <i>media</i>, <i>ping</i> and <i>referrerpolicy</i>.<br>
+          If the image cannot be loaded, <i>alt</i> will display in that area instead.</td>
+        <td>alt<br>
+          coords<br>
+          download<br>
+          href<br>
+          hreflang<br>
+          media<br>
+          referrerpolicy<br>
+          reltype<br>
+          shape<br>
+          target<br>
+          Globals</td>
+      </tr>
+      <tr class="t1block t1page">
+        <td>Article</td>
+        <td>&lt;article&gt;</td>
+        <td>Self-contained, plain, independent block text. Used in forums, blogs, etc.</td>
+        <td>Globals</td>
+      </tr>
+      <tr  class="t1block t1page">
+        <td>Aside</td>
+        <td>&lt;aside&gt;</td>
+        <td>Plain block text indirectly related to main content. Used for sidebars, notes,
+          etc,</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1inline t1media">
+        <td>Audio</td>
+        <td>&lt;audio&gt;</td>
+        <td>An embedded audio stream player that will play <i>src</i>. It will start as soon as
+          it loads given <i>autoplay</i> and as specified by <i>preload</i>, start again after
+          it ends given <i>loop</i> or not play given <i>muted</i>. It comes with added buttons
+          dependent on <i>controls</i>.<br>Its argument replaces the audio when it is not
+          avaliable.</td>
+        <td>autoplay<br>
+          controls<br>
+          loop<br>
+          muted<br>
+          src<br>
+          preload<br>
+          Globals</td>
+      </tr>
+      <tr class="t1inline t1format">
+        <td>Bold</td>
+        <td>&lt;b&gt;</td>
+        <td>Makes the selected inline text display as bold.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1none">
+        <td>Base</td>
+        <td>&lt;base&gt;</td>
+        <td>Specifies the predefined URL <i>href</i> and target <i>target</i> references across
+          the page.<br>
+          It should be unique and be placed inside &lt;head&gt;.</td>
+        <td>href<br>
+        target<br>
+        Globals</td>
+      </tr>
+      <tr class="t1inline t1format">
+        <td>Bidirectional Isolation</td>
+        <td>&lt;bdi&gt;</td>
+        <td>Separates a piece of text which may be formatted in a different direction. For
+          example, it allows Arabic and Latin characters to coexist in a single line without
+          placement issues.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1inline t1format">
+        <td>Bidirectional Override</td>
+        <td>&lt;bdo&gt;</td>
+        <td>Overrides the current text direction with <i>dir</i>.</td>
+        <td>dir<br>Globals</td>
+      </tr>
+      <tr class="t1block t1format">
+        <td>Block Quote</td>
+        <td>&lt;blockquote&gt;</td>
+        <td>Block text quoted from another source <i>cite</i>.<br>By default, it is indented.</td>
+        <td>cite<br>Globals</td>
+      </tr>
+      <tr class="t1block">
+        <td>Body</td>
+        <td>&lt;body&gt;</td>
+        <td>The entire visible contents of a page. Unique and placed directly inside
+          &lt;html&gt;.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1inline t1format">
+        <td>Line Break</td>
+        <td>&lt;br&gt;</td>
+        <td>Introduces a single line break.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1inline t1form">
+        <td>Button</td>
+        <td>&lt;button&gt;</td>
+        <td>A clickable button of type <i>type</i> that will trigger an event <i>onclick</i>
+          when clicked. It cannot be clicked given <i>disabled</i> and it starts as selected
+          given <i>autofocus</i>.<br>
+          When inside a form, or linked to it by <i>form</i>, its default values are
+          <i>name</i>=<i>value</i>. Furthermore, when it is a "submit" button, <i>formaction</i>
+          can override the form's <i>action</i> attribute; <i>formenctype</i>, its <i>enctype</i>;
+          <i>formmethod</i>, its <i>method</i>; <i>formnovalidate</i>, its <i>novalidate</i>; and
+          <i>formtarget</i>, its <i>target</i>.<br>
+          It can also show, hide or toggle (depending on <i>popovertargetaction</i>) a pop-over
+          element <i>popovertarget</i>, if given.</td>
+        <td>autofocus<br>
+        disabled<br>
+        name<br>
+        type<br>
+        value<br>
+        form<br>
+        formaction<br>
+        formenctype<br>
+        formmethod<br>
+        formnovalidate<br>
+        formtarget<br>
+        popovertarget<br>
+        popovertargetaction<br>
+        Globals</td>
+      </tr>
+      <tr class="t1inline t1media">
+        <td>Canvas</td>
+        <td>&lt;canvas&gt;</td>
+        <td>A graphic window of dimensions <i>width</i> by <i>height</i> to draw on via a script.
+          Its argument replaces the canvas when it is not avaliable.</td>
+        <td>height<br>width<br>Globals</td>
+      </tr>
+      <tr class="t1table">
+        <td>Caption</td>
+        <td>&lt;caption&gt;</td>
+        <td>Creates a caption for a table immediately after the &lt;table&gt; tag.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1inline t1format">
+        <td>Cite</td>
+        <td>&lt;cite&gt;</td>
+        <td>Inline text describing the title of a creative work, etc. It is italized by default.
+        </td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1inline t1format">
+        <td>Code</td>
+        <td>&lt;code&gt;</td>
+        <td>Displays inline code. By default, it shows up in a monospace font.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1none t1table">
+        <td>Column</td>
+        <td>&lt;col&gt;</td>
+        <td>Specifies the formatting style for a column in a &lt;colgroup&gt;.<br>
+          It can cover a single column or <i>span</i> columns.</td>
+        <td>span<br>Globals</td>
+      </tr>
+      <tr class="t1none t1table">
+        <td>Column Group</td>
+        <td>&lt;colgroup&gt;</td>
+        <td>Encompasses all (or <i>span</i>) &lt;col&gt; in a table.</td>
+        <td>span<br>Globals</td>
+      </tr>
+      <tr class="t1none">
+        <td>Data</td>
+        <td>&lt;data&gt;</td>
+        <td>Adds a hidden machine-readable data <i>value</i> to an element.</td>
+        <td>value<br>Globals</td>
+      </tr>
+      <tr class="t1none t1form">
+        <td>Data List</td>
+        <td>&lt;datalist&gt;</td>
+        <td>Predefined options for an &lt;input&gt; autocomplete.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1block t1list">
+        <td>Description Data</td>
+        <td>&lt;dd&gt;</td>
+        <td>The description for a term (&lt;dt&gt;) in a description list (&lt;dl&gt;).<br>
+          By default, it is indented.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1inline t1format">
+        <td>Deletion</td>
+        <td>&lt;del&gt;</td>
+        <td>Marks inline text as deleted from the document for a reason cited in <i>cite</i>,
+          as before an insertion, on day and time given by <i>datetime</i>.<br>
+          It overstrikes the content by default.</td></td>
+        <td>cite<br>datetime<br>Globals</td>
+      </tr>
+      <tr class="t1block t1page">
+        <td>Details</td>
+        <td>&lt;details&gt;</td>
+        <td>Creates an openable widget headed by an inner &lt;summary&gt;. By default, it is
+          closed (or open given <i>open</i>), and when open, it will show its arguments below.</td>
+        <td>open<br>Globals</td>
+      </tr>
+      <tr class="t1inline t1format">
+        <td>Definition</td>
+        <td>&lt;dfn&gt;</td>
+        <td>Formats inline text as a definition element. It is italized by default.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1page">
+        <td>Dialogue</td>
+        <td>&lt;dialog&gt;</td>
+        <td>A popup dialogue box or subwindow. It is by default hidden unless <i>open</i> is
+          given.</td>
+        <td>open<br>Globals</td>
+      </tr>
+      <tr class="t1block t1format">
+        <td>Division</td>
+        <td>&lt;div&gt;</td>
+        <td>Defines an independent block container for any other element.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1block t1list">
+        <td>Description List</td>
+        <td>&lt;dl&gt;</td>
+        <td>A description list element nesting &lt;dt&gt; - &lt;dd&gt; pairs.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1block t1list">
+        <td>Description Term</td>
+        <td>&lt;dd&gt;</td>
+        <td>A term with a description (&lt;dd&gt;) inside a description list (&lt;dl&gt;).</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1inline t1format">
+        <td>Emphasis</td>
+        <td>&lt;em&gt;</td>
+        <td>Marks the inline text as emphasized. It is displayed as italized by default.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1inline t1media">
+        <td>Embedding</td>
+        <td>&lt;embed&gt;</td>
+        <td>A container for an external resource of type <i>type</i> from location <i>src</i>
+          of dimensions <i>width</i> by <i>height</i>. It is outdated, though.</td>
+        <td>height<br>
+          src<br>
+          type<br>
+          width<br>
+          Globals</td>
+      </tr>
+      <tr class="t1block t1form">
+        <td>Field Set</td>
+        <td>&lt;fieldset&gt;</td>
+        <td>A box grouper of related elements from the parent form or an external one <i>form</i>.
+          All of its inputs are disabled given <i>disabled</i> and it can have a name <i>name</i>.
+          <br>It may also be titled by an inner &lt;legend&gt;.</td>
+        <td>disabled<br>
+          form<br>
+          name<br>
+          Globals</td>
+      </tr>
+      <tr class="t1block t1media">
+        <td>Figure Caption</td>
+        <td>&lt;figcaption&gt;</td>
+        <td>Creates caption text for an image inside a &lt;figure&gt; element.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1block t1media">
+        <td>Figure</td>
+        <td>&lt;figure&gt;</td>
+        <td>Defines a freely positioned container for media content.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1block t1page">
+        <td>Footer</td>
+        <td>&lt;footer&gt;</td>
+        <td>A plain footer for a document, containing authorship, contact information, links, etc.
+        </td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1block t1form">
+        <td>Form</td>
+        <td>&lt;form&gt;</td>
+        <td>An HTML form. Serves as a container for &lt;input&gt; and related elements to send
+          their collected data (in a character set <i>accept-charset</i>) to <i>action</i>
+          (in relation <i>rel</i> to the current document) through an HTML <i>method</i> (in
+          an encoding <i>enctype</i> for POST requests) at location <i>target</i>. It can have
+          a name <i>name</i>, enable autocompletion for inner inputs given <i>autocomplete</i>
+          and disable their validation given <i>novalidate</i>.
+        </td>
+        <td>accept-charset<br>
+          action<br>
+          autocomplete<br>
+          enctype<br>
+          method<br>
+          name<br>
+          novalidate<br>
+          rel<br>
+          target<br>
+          Globals</td>
+      </tr>
+      <tr class="t1block t1page">
+        <td>Headings</td>
+        <td>&lt;h1&gt;<br>
+          &lt;h2&gt;<br>
+          &lt;h3&gt;<br>
+          &lt;h4&gt;<br>
+          &lt;h5&gt;<br>
+          &lt;h6&gt;<br></td>
+        <td>A header to title a section or succesive subsections of a document.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1none">
+        <td>Head</td>
+        <td>&lt;head&gt;</td>
+        <td>The document's metadata container.<br>
+          It is directly inside &lt;html&gt; and above &lt;body&gt;.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1block t1page">
+        <td>Header</td>
+        <td>&lt;header&gt;</td>
+        <td>Contains all information encompassing the document's introduction.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1block t1format">
+        <td>Heading Group</td>
+        <td>&lt;hgroup&gt;</td>
+        <td>Groups a header together with introductory paragraphs.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1block t1page">
+        <td>Horizontal Rule</td>
+        <td>&lt;hr&gt;</td>
+        <td>Marks a thematic change in content. By default, it is displayed as a horizontal line.
+        </td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1block">
+        <td>HyperText Markup Language</td>
+        <td>&lt;html&gt;</td>
+        <td>The root element. Contains all other elements except &lt;!DOCTYPE&gt;.<br>
+          If XML support is needed, <i>xmlns</i> specifies its namespace attribute.</td>
+        <td>xmlns<br>Globals</td>
+      </tr>
+      <tr class="t1inline t1format">
+        <td>Italic</td>
+        <td>&lt;i&gt;</td>
+        <td>Makes the selected inline text display as italic.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1inline t1media">
+        <td>Inline Frame</td>
+        <td>&lt;iframe&gt;</td>
+        <td>Embeds another HTML page, either from an exernal URL <i>src</i> or an internal doc
+          <i>srcdoc</i>, into the document through a subwindow of dimensions <i>width</i> by
+          <i>height</i>. It may have a name <i>name</i> and it may defer its load with
+          <i>loading</i>="lazy" (default is "eager", loading it immediately).<br>
+          The frame sends <i>referrerpolicy</i> to the destination, and that inside page is
+          restricted by a feature policy <i>allow</i> and cannot perform certain actions unless
+          specified by <i>allowfullscreen</i>, <i>allowpaymentrequest</i> and <i>sandbox</i>
+          (which can contain: "allow-forms", "allow-pointer-lock", "allow-popups",
+          "allow-same-origin", "allow-scripts", "allow-top-navigation").</td>
+        <td>allow<br>
+          allowfullscreen<br>
+          allowpaymentrequest<br>
+          height<br>
+          loading<br>
+          name<br>
+          referrerpolicy<br>
+          sandbox<br>
+          src<br>
+          srcdoc<br>
+          width<br>
+          Globals</td>
+      </tr>
+      <tr class="t1inline t1media">
+        <td>Image</td>
+        <td>&lt;img&gt;</td>
+        <td>Defines a space of dimensions <i>width</i> by <i>height</i> to hold an image from
+          <i>src</i> (or multiple from <i>srcset</i> to use depending on <i>sizes</i>), or some
+          text <i>alt</i> if it's not avaliable.<br>
+          The image may be a map (it may send the coordinates of a click to a page in a
+          parent &lt;a&gt;'s <i>href</i>) given <i>ismap</i> or use a client-side map <i>usemap</i>
+          ("#" + the <i>id</i> of a &lt;map&gt;), it can have a description <i>longdesc</i>, and
+          it may defer its load with <i>loading</i>="lazy" (default is "eager", loading it
+          immediately).<br>
+          Additionally, the source handles HTTP CORS requests as specified by <i>crossorigin</i>
+          and sends <i>referrerpolicy</i> to the destination page.
+        </td>
+        <td>alt<br>
+        crossorigin<br>
+        height<br>
+        ismap<br>
+        loading<br>
+        longdesc<br>
+        referrerpolicy<br>
+        sizes<br>
+        src<br>
+        srcset<br>
+        usemap<br>
+        width<br>
+        Globals</td>
+      </tr>
+      <tr class="t1inline t1form">
+        <td>Input</td>
+        <td>&lt;input&gt;</td>
+        <td>The standart input field for any form, sending information in <i>name</i>=<i>value</i>
+          pairs when submitted.<br>It can take on a multitude of forms depending on its <i>type</i>:
+          <br><ul style="margin-top:5px;margin-bottom:5px;">
+            <li>"button" creates a button that behaves like &lt;button&gt;. Its <i>value</i>
+              is its displayed text and <i>popovertarget</i> and <i>popovertargetaction</i> are
+              used the same way as in a regular button.</li>
+            <li>"checkbox" is one option from a multiple selection list. It is preselected
+              given <i>checked</i>.</li>
+            <li>"color" spawns a color picker, and sends the chosen value in hexadecimal.</li>
+            <li>"date" spawns a date selector. Only valid dates between <i>min</i> and <i>max</i>
+              may be chosen. This applies for all date and time types.</li>
+            <li>"datetime-local" spawns a date-time selector. It is independent of timezone.</li>
+            <li>"email" creates a text field to introduce an email adress. The validity of the user
+              input is checked automatically. Additionally, more than one address is allowed
+              given <i>multiple</i>.</li>
+            <li>"file" creates a file selection button, and sends the filename. More than one file
+              is allowed given <i>multiple</i>, and only files of type <i>accept</i> are chosen.
+            </li>
+            <li>"hidden" sends additional information without it being displayed to the page.</li>
+            <li>"image" defines an image from <i>src</i> of dimensions <i>width</i> by <i>height</i>
+              to work as a submit button. If it cannot be loaded, <i>alt</i> will display instead.
+              Lastly, <i>formaction</i> can override the form's <i>action</i> attribute;
+              <i>formenctype</i>, its <i>enctype</i>; <i>formmethod</i>, its <i>method</i>;
+              <i>formnovalidate</i>, its <i>novalidate</i>; and <i>formtarget</i>, its
+              <i>target</i>.</li>
+            <li>"month" spawns a date selector of only month and year.</li>
+            <li>"number" allows numbers between <i>min</i> and <i>max</i>, and at an interval of
+              <i>step</i>, in a number field.</li>
+            <li>"password" creates a textbox that automatically hides text.</li>
+            <li>"radio" is one option from a single selection list. It is preselected given
+              <i>checked</i>.</li>
+            <li>"range" allows numbers between <i>min</i> and <i>max</i>, and at an interval of
+              <i>step</i>, in a slider. Its actual value is not automatically displayed.</li>
+            <li>"reset" creates a button that, when pressed, restores all inputs to their default
+              state.</li>
+            <li>"search" creates a textbox adequate for in-site or external searches.</li>
+            <li>"submit" creates a submit button to submit the form. Also, <i>formaction</i> can
+              override the form's <i>action</i> attribute; <i>formenctype</i>, its <i>enctype</i>;
+              <i>formmethod</i>, its <i>method</i>; <i>formnovalidate</i>, its <i>novalidate</i>;
+              and <i>formtarget</i>, its <i>target</i>.</li>
+            <li>"tel" creates a number field for a phone number.</li>
+            <li>"text" creates a plain, free textbox.</li>
+            <li>"time" spawns a time selector. It is independent of timezone.</li>
+            <li>"url" creates a textbox for entering a URL. It is validated automatically.</li>
+            <li>"week" spawns a date selector of whole weeks.</li>
+          </ul>
+          Apart from <i>type</i>-specific attributes, others may be used. Given <i>autocomplete</i>,
+          the browser may suggest input possibilities. With <i>dirname</i>, the text direction is
+          also sent. Given <i>disabled</i>, an input is not modifiable nor sent. If the element is
+          outside a form, it may be linked to one <i>form</i>. A list of options for autocomplete
+          can be linked by <i>list</i>. The number of characters an input can take may be limited
+          to between <i>minlength</i> and <i>maxlength</i>, and its structure may be specified by
+          <i>pattern</i>. Given <i>readonly</i>, an input is unmodifiable but still sent. Given
+          <i>required</i>, the form is invalid without the input being filled/checked. And the
+          visual width of a textbox can be specified to be <i>size</i>.
+        </td>
+        <td>accept<br>
+          alt<br>
+          autocomplete<br>
+          autofocus<br>
+          checked<br>
+          dirname<br>
+          disabled<br>
+          form<br>
+          formaction<br>
+          formenctype<br>
+          formmethod<br>
+          formnovalidate<br>
+          formtarget<br>
+          height<br>
+          list<br>
+          max<br>
+          maxlength<br>
+          min<br>
+          minlength<br>
+          multiple<br>
+          name<br>
+          pattern<br>
+          placeholder<br>
+          popovertarget<br>
+          popovertargetaction<br>
+          readonly<br>
+          required<br>
+          size<br>
+          src<br>
+          step<br>
+          type<br>
+          value<br>
+          width<br>
+          Globals</td>
+      </tr>
+      <tr class="t1inline t1format">
+        <td>Insertion</td>
+        <td>&lt;ins&gt;</td>
+        <td>Marks inline text as inserted into the document for a reason cited in <i>cite</i>,
+          as after a deletion, on day and time given by <i>datetime</i>.<br>
+          It underlines the content by default.</td></td>
+        <td>cite<br>datetime<br>Globals</td>
+      </tr>
+      <tr class="t1inline t1format">
+        <td>Keyboard Input</td>
+        <td>&lt;kbd&gt;</td>
+        <td>Defines a keyboard key to press. By default, it shows up in a monospace font.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1inline t1form">
+        <td>Label</td>
+        <td>&lt;label&gt;</td>
+        <td>A label for a form element. It is inside its parent form or linked to it by <i>form</i>
+        and it is bound to its child element or to the element with id <i>for</i>.</td>
+        <td>for<br>form<br>Globals</td>
+      </tr>
+      <tr class="t1block t1form">
+        <td>Legend</td>
+        <td>&lt;legend&gt;</td>
+        <td>Defines a caption for a &lt;fieldset&gt;.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1list">
+        <td>List Item</td>
+        <td>&lt;li&gt;</td>
+        <td>An entry in a list. By default, it will be displayed with a bullet inside &lt;ul&gt;
+          and &lt;menu&gt;, or numbered (with number <i>value</i>) inside &lt;ol&gt;.</td>
+        <td>value<br>Globals</td>
+      </tr>
+      <tr class="t1none t1media">
+        <td>Link</td>
+        <td>&lt;link&gt;</td>
+        <td>Defines a linked resource from <i>href</i> (in language <i>hreflang</i> and of media
+          type <i>type</i>) to use for the document. It can function differently depending on
+          <i>rel</i>:<br>
+          <ul style="margin-top:5px;margin-bottom:5px;">
+            <li>"alternate" defines an alternate version of the document.</li>
+            <li>"author" links to the page author.</li>
+            <li>"dns-prefetch" fetches the target page's IP number (through DNS).</li>
+            <li>"help" links to a help page.</li>
+            <li>"icon" defines an icon to go along the page's &lt;title&gt;. Its dimensions are
+              specified by <i>sizes</i>.</li>
+            <li>"license" links to copyright information.</li>
+            <li>"next" links to the next page in a series or list.</li>
+            <li>"pingback" links to the server handling the document's pingback.</li>
+            <li>"preconnect" connects to the target resource origin.</li>
+            <li>"prefetch" fetches and caches the target resource.</li>
+            <li>"preload" fetches, caches and sets up the target resource according to the <i>as</i>
+              attribute.</li>
+            <li>"prerender" renders the target resource in the background, using bandwidth.</li>
+            <li>"prev" links to the previous page in a series or list.</li>
+            <li>"search" provides a resource to use when searching through the document/domain.</li>
+            <li>"stylesheet" defines a CSS file to use to format the document.</li>
+          </ul>
+          Additionally, the link handles HTTP CORS requests as specified by <i>crossorigin</i> and
+          sends <i>referrerpolicy</i> to the destination page. Also, the link may load only when
+          conditions denoted by <i>media</i> are met.
+        </td>
+        <td>crossorigin<br>
+          href<br>
+          hreflang<br>
+          media<br>
+          referrerpolicy<br>
+          rel<br>
+          sizes<br>
+          type<br>
+          Globals</td>
+      </tr>
+      <tr class="t1block t1page">
+        <td>Main Content</td>
+        <td>&lt;main&gt;</td>
+        <td>Groups all the proper content of a page, excluding sidebars or navigation resources.<br>
+          It is unique and never a child of another page content grouper element.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1media">
+        <td>Image Map</td>
+        <td>&lt;map&gt;</td>
+        <td>Defines a list of clickable areas within an image alongside child &lt;area&gt; tags.<br>
+          It is linked to an image whose <i>usemap</i> attribute is equal to "#<i>name</i>".</td>
+        <td>name<br>Globals</td>
+      </tr>
+      <tr class="t1inline t1format">
+        <td>Mark</td>
+        <td>&lt;mark&gt;</td>
+        <td>Defines marked text. By default, it is highlighted in yellow.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1block t1list">
+        <td>Unordered List</td>
+        <td>&lt;menu&gt;<br>&lt;ul&gt;</td>
+        <td>Defines an unordered list, bulleted by default. It groups &lt;li&gt; elements.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1none">
+        <td>Metadata</td>
+        <td>&lt;meta&gt;</td>
+        <td>Information about the page data. Depending on <i>name</i>, it can define the application
+          name (application-name), authorship (author), description (description), generating
+          software package (generator), keywords (keywords), and viewport settings (viewport). The
+          values for these are specified in <i>content</i>. A character set can also be set by
+          <i>charset</i> (UTF-8 by default) and a stylesheet, security policy and refreshing
+          interval can be set by <i>http-equiv</i>.</td>
+        <td>charset<br>
+          content<br>
+          http-equiv<br>
+          name<br>
+          Globals</td>
+      </tr>
+      <tr class="t1inline t1form">
+        <td>Meter</td>
+        <td>&lt;meter&gt;</td>
+        <td>Creates a measurement gauge for a value <i>value</i> between <i>min</i> and <i>max</i>.
+          It is by default displayed in red if the value lies below <i>low</i>, yellow until
+          <i>high<i>, and green otherwise. Its optimal value is <i>optimum</i>. It is linked to a
+          form via <i>form</i>.</td>
+        <td>form<br>
+          high<br>
+          low<br>
+          max<br>
+          min<br>
+          optimum<br>
+          value<br>
+          Globals</td>
+      </tr>
+      <tr class="t1block t1page">
+        <td>Navigation</td>
+        <td>&lt;nav&gt;</td>
+        <td>A container for navigation resources, major link groups or bars.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1none">
+        <td>No Script</td>
+        <td>&lt;noscript&gt;</td>
+        <td>Alternate content to be present when JavaScript client-side scripts are disabled.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1inline t1media">
+        <td>Object</td>
+        <td>&lt;object&gt;</td>
+        <td>A container for an external resource of type <i>type</i> found at <i>data</i>, named
+          <i>name</i>, of dimensions <i>width</i> by <i>height</i>. It may belong to a form
+          <i>form</i>, use an image map <i>usemap</i>, and it must be the correct type in order
+          to display given <i>typemustmatch</i>. It was originally intended to embed plug-ins.</td>
+        <td>data<br>
+          form<br>
+          height<br>
+          name<br>
+          type<br>
+          typemustmatch<br>
+          usemap<br>
+          width<br>
+          Globals</td>
+      </tr>
+      <tr class="t1block t1list">
+        <td>Ordered List</td>
+        <td>&lt;ol&gt;</td>
+        <td>Defines an ordered list, grouping &lt;li&gt; elements. Its numbering is defined by
+          <i>type</i> (decimal by default), starts at <i>start</i> (1 by default) and counts up
+          or, given <i>reversed</i>, down.</td>
+        <td>reversed<br>start<br>type<br>Globals</td>
+      </tr>
+      <tr class="t1form">
+        <td>Option Group</td>
+        <td>&lt;optgroup&gt;</td>
+        <td>Groups multiple options together in a &lt;select&gt; drop-down list under a label
+          <i>label</i>. The whole group is disabled given <i>disabled</i>.</td>
+        <td>disabled<br>label<br>Globals</td>
+      </tr>
+      <tr class="t1form">
+        <td>Option</td>
+        <td>&lt;option&gt;</td>
+        <td>A single option to select in &lt;select&gt; or &lt;datalist&gt;. It shows its argument
+          or <i>label</i> for simplicity, and will send <i>value</i> when the form is submitted.
+          It is preselected given <i>selected</i> and unavaliable given <i>disabled</i>.</td>
+        <td>disabled<br>
+          label<br>
+          selected<br>
+          value<br>
+          Globals</td>
+      </tr>
+      <tr class="t1inline t1form">
+        <td>Output</td>
+        <td>&lt;output&gt;</td>
+        <td>Displays a result updated real-time via a script. Its inputs are listed in <i>for</i>
+          and its value is modified externally, referring to it by its <i>name</i>. It is linked
+          to a form through <i>form</i>.</td>
+        <td>for<br>form<br>name<br>Globals</td>
+      </tr>
+      <tr class="t1block">
+        <td>Paragraph</td>
+        <td>&lt;p&gt;</td>
+        <td>A simple block of text, with margins above and below.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1none t1media">
+        <td>Parameter</td>
+        <td>&lt;param&gt;</td>
+        <td>Specifies an attribute <i>name</i> for the parent &lt;object&gt; to have the value
+          <i>value</i>.</td>
+        <td>name<br>value<br>Globals</td>
+      </tr>
+      <tr class="t1inline t1media">
+        <td>Picture</td>
+        <td>&lt;picture&gt;</td>
+        <td>A container for a responsive and flexible image. It contains one or more &lt;source&gt;
+          tags, of which the first one that matches proper conditions and browser support will
+          display, and an &lt;img&gt; at the end as a fallback.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1block t1format">
+        <td>Preformatted Text</td>
+        <td>&lt;pre&gt;</td>
+        <td>A block of preformatted text. It will preserve whitespace and display in a monospaced
+          font by default.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1inline t1form">
+        <td>Progress</td>
+        <td>&lt;progress&gt;</td>
+        <td>Defines a progress bar suitable for real-time updating via a script. Its current value
+          is <i>value</i> and its maximum is <i>max</i>.</td>
+        <td>max<br>value<br>Globals</td>
+      </tr>
+      <tr class="t1inline t1format">
+        <td>Quotation</td>
+        <td>&lt;q&gt;</td>
+        <td>A short quotation from a cite <i>cite</i>. It is between quotation marks by default.</td>
+        <td>cite<br>Globals</td>
+      </tr>
+      <tr class="t1inline t1format">
+        <td>Ruby Parenthesis</td>
+        <td>&lt;rp&gt;</td>
+        <td>Allows the use of parentheses outside ruby text in browsers that do not support ruby
+          annotations.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1inline t1format">
+        <td>Ruby Text</td>
+        <td>&lt;rt&gt;</td>
+        <td>Attaches a pronounciation guide on top of East Asian characters in a &lt;ruby&gt;
+          annotation.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1inline t1format">
+        <td>Ruby Annotation</td>
+        <td>&lt;ruby&gt;</td>
+        <td>Defines a set of text to be attached an explanation in a &lt;rt&gt;.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1inline t1format">
+        <td>Strikethrough</td>
+        <td>&lt;s&gt;</td>
+        <td>Makes the selected inline text overstruck.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1inline t1format">
+        <td>Sample Output</td>
+        <td>&lt;samp&gt;</td>
+        <td>Defines sample program output. It is displayed in a monospaced font by default.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1none">
+        <td>Script</td>
+        <td>&lt;script&gt;</td>
+        <td>A JavaScript executable (<i>type</i>="text/javascript") for dynamic page function
+          written directly on the HTML or fetched from <i>src</i>. The file will not execute in
+          a browser supporting ES2015 given <i>nomodule</i>.<br>
+          For external scripts, <i>async</i> and <i>defer</i> will load the script in parallel to
+          parsing of the document. Given the former, it will run as soon as it's avaliable; given
+          the latter, it will wait until the page is parsed. Additionally, the source handles HTTP
+          CORS requests as specified by <i>crossorigin</i> and sends <i>referrerpolicy</i> to the
+          destination page. It also checks if the file has been manipulated by comparing an
+          <i>integrity</i> SRI.</td>
+        <td>async<br>
+          crossorigin<br>
+          defer<br>
+          integrity<br>
+          nomodule<br>
+          referrerpolicy<br>
+          src<br>
+          type<br>
+          Globals</td>
+      </tr>
+      <tr class="t1block t1page">
+        <td>Search</td>
+        <td>&lt;search&gt;</td>
+        <td>A container for search-related tools, like search bars.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1block t1page">
+        <td>Section</td>
+        <td>&lt;section&gt;</td>
+        <td>Defines a plain document section.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1inline t1form">
+        <td>Selection</td>
+        <td>&lt;select&gt;</td>
+        <td>Creates a drop-down list in a form <i>form</i>. It will show as options its children
+          &lt;option&gt; in a list of <i>size</i> visible entries, of which one (or more given
+          <i>multiple</i>) may be selected and sent with name <i>name</i>. Additionally, as with
+          &lt;input&gt;, it starts as selected given <i>autofocus</i>, is disabled given
+          <i>disabled</i>, and cannot be sent blank given <i>required</i>.</td>
+        <td>autofocus<br>
+          disabled<br>
+          form<br>
+          multiple<br>
+          name<br>
+          required<br>
+          size<br>
+          Globals</td>
+      </tr>
+      <tr class="t1inline t1format">
+        <td>Small</td>
+        <td>&lt;small&gt;</td>
+        <td>Makes the selected inline text smaller than usual.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1none t1media">
+        <td>Source</td>
+        <td>&lt;source&gt;</td>
+        <td>Specifies a possible media file <i>src</i> of MIME-type <i>type</i> for an
+          &lt;audio&gt; or &lt;video&gt;, or an image <i>srcset</i> for a &lt;picture&gt;,
+          to be used met the conditions specified in <i>media</i>. If it is unusable, it
+          falls back to the next &lt;source&gt;.</td>
+        <td>media<br>
+          src<br>
+          srcset<br>
+          type<br>
+          Globals</td>
+      </tr>
+      <tr class="t1inline t1format">
+        <td>Span</td>
+        <td>&lt;span&gt;</td>
+        <td>Defines an independent inline container for any other content.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1inline t1format">
+        <td>Strong</td>
+        <td>&lt;strong&gt;</td>
+        <td>Marks the inline text as important. It is displayed as bold by default.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1none">
+        <td>Style</td>
+        <td>&lt;style&gt;</td>
+        <td>Defines a CSS stylesheet (<i>type</i>="text/CSS") for element formatting within the
+          page. It may change depending on device or media query given by <i>media</i>.</td>
+        <td>media<br>type<br>Globals</td>
+      </tr>
+      <tr class="t1inline t1format">
+        <td>Subscript</td>
+        <td>&lt;sub&gt;</td>
+        <td>Makes the selected inline text subscripted (aligned down and smaller).</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1block t1page">
+        <td>Summary</td>
+        <td>&lt;summary&gt;</td>
+        <td>Defines a visible heading for a &lt;details&gt; element. It should be placed directly
+          below the tag.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1inline t1format">
+        <td>Superscript</td>
+        <td>&lt;sup&gt;</td>
+        <td>Makes the selected inline text superscripted (aligned up and smaller).</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1media">
+        <td>Scalable Vector Graphics</td>
+        <td>&lt;svg&gt;</td>
+        <td>Defines a container for SVG object rendering, written in XML.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1block t1table">
+        <td>Table</td>
+        <td>&lt;table&gt;</td>
+        <td>A table element, containing &lt;caption&gt;, &lt;colgroup&gt;, &lt;thead&gt;,
+          &lt;tbody&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt; and &lt;tfoot&gt; tags.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1table">
+        <td>Table Body</td>
+        <td>&lt;tbody&gt;</td>
+        <td>Groups regular table rows together in a table element. It is between &lt;thead&gt;
+          and &lt;tfoot&gt;.<br>It is created automatically when not specified directly.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1table">
+        <td>Table Data</td>
+        <td>&lt;td&gt;</td>
+        <td>Defines a regular data cell in a table row. It is related to the cell(s) <i>headers</i>
+          and it can span more than one column or row with <i>colspan</i> and <i>rowspan</i>
+          respectively.</td>
+        <td>colspan<br>headers<br>rowspan<br>Globals</td>
+      </tr>
+      <tr class="t1none t1format">
+        <td>Template</td>
+        <td>&lt;template&gt;</td>
+        <td>A container for template content that will not display. It can be later used by 
+          JavaScript.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1inline t1form">
+        <td>Text Area</td>
+        <td>&lt;textarea&gt;</td>
+        <td>A large, scalable textbox of dimensions <i>rows</i> by <i>cols</i> (in characters)
+          to submit a multi-line text input in a form <i>form</i>. The text will wrap given "hard"
+          in <i>wrap</i>. And, as in &lt;input&gt;, it will be selected given <i>autofocus</i>, be
+          disabled given <i>disabled</i>, have a grayed-out prompt <i>placeholder</i> when empty,
+          be unmodifiable but still sent given <i>readonly</i>, not be accepted blank given
+          <i>required</i>, and be sent with name <i>name</i>. Additionally, the input text may be
+          limited to at most <i>maxlength</i> characters, and there may be a default text given by
+          the tag's argument.</td>
+        <td>autofocus<br>
+          cols<br>
+          dirname<br>
+          disabled<br>
+          form<br>
+          maxlenght<br>
+          name<br>
+          placeholder<br>
+          readonly<br>
+          required<br>
+          rows<br>
+          wrap<br>
+          Globals</td>
+      </tr>
+      <tr class="t1table">
+        <td>Table Footer</td>
+        <td>&lt;tfoot&gt;</td>
+        <td>Groups footer table rows together in a table element. It is after all other table
+          children.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1table">
+        <td>Table Header</td>
+        <td>&lt;th&gt;</td>
+        <td>Defines a single header cell in a table row. As with &lt;td&gt;, It is related to the
+          cell(s) <i>headers</i> and it can span more than one column or row with <i>colspan</i>
+          and <i>rowspan</i> respectively. Its content is abbreviated in <i>abbr</i>. Also, the
+          header can title a col, colgroup, row or rowgroup depending on <i>scope</i>.</td>
+        <td>abbr<br>
+          colspan<br>
+          headers<br>
+          rowspan<br>
+          scope<br>
+          Globals</td>
+      </tr>
+      <tr class="t1table">
+        <td>Table Head</td>
+        <td>&lt;thead&gt;</td>
+        <td>Groups header table rows together in a table element. It is before &lt;caption&gt; and
+          &lt;colgroup&gt; tags, but before &lt;tbody&gt; and &lt;tfoot&gt;.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1inline t1format">
+        <td>Time</td>
+        <td>&lt;time&gt;</td>
+        <td>Takes some text to be specified a machine-readable date and time <i>datetime</i>.</td>
+        <td>datetime<br>Globals</td>
+      </tr>
+      <tr class="t1none">
+        <td>Title</td>
+        <td>&lt;title&gt;</td>
+        <td>Defines a text-only page title. It will be used in the browser toolbar, web searches,
+          etc.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1table">
+        <td>Table Row</td>
+        <td>&lt;tr&gt;</td>
+        <td>A single row in a table, which may contain &lt;th&gt; and &lt;td&gt; elements.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1media">
+        <td>Text Track</td>
+        <td>&lt;track&gt;</td>
+        <td>Defines an accompanying text resource, such as subtitles or captions, to play alongside
+          the parent &lt;audio&gt; or &lt;video&gt;. It consists of a .vtt file from <i>src</i> in
+          language <i>srclang</i>, of type <i>kind</i> (captions, chapters, descriptions, metadata
+          or subtitles) and titled <i>label</i>. Given <i>default</i>, it is the preselected one
+          from a list of multiple.</td>
+        <td>default<br>
+          kind<br>
+          label<br>
+          src<br>
+          srclang<br>
+          Globals</td>
+      </tr>
+      <tr class="t1inline t1format">
+        <td>Underline</td>
+        <td>&lt;u&gt;</td>
+        <td>Makes the selected inline text display underlined.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1inline t1format">
+        <td>Variable</td>
+        <td>&lt;var&gt;</td>
+        <td>Displays an inline variable inside other text. It is italized by default.</td>
+        <td>Globals</td>
+      </tr>
+      <tr class="t1inline t1media">
+        <td>Video</td>
+        <td>&lt;video&gt;</td>
+        <td>An embedded video player of dimensions <i>width</i> by <i>height</i> that will play
+          <i>src</i> or display an image <i>poster</i> while it waits. It will start as soon as
+          it loads given <i>autoplay</i> and as specified by <i>preload</i>, start again after
+          it ends given <i>loop</i> or not play sound given <i>muted</i>. It comes with added
+          buttons dependent on <i>controls</i>.<br>Its argument replaces the video when it is not
+          avaliable.</td>
+        <td>autoplay<br>
+          controls<br>
+          height<br>
+          loop<br>
+          muted<br>
+          poster<br>
+          preload<br>
+          src<br>
+          width<br>
+          Globals</td>
+      </tr>
+      <tr class="t1none t1format">
+        <td>Word Break Opportunity</td>
+        <td>&lt;wbr&gt;</td>
+        <td>Allows the browser to add a line break at its position within a long word if needed.
+        </td>
+        <td>Globals</td>
+      </tr>
+    </tbody>
+    </table>
+    <script>
+      const sel = document.getElementsByClassName("sel");
+      const all = document.getElementById("htmltagsbody").children;
+      let className = "u";
+
+      function select(x) {
+        for (let i=0; i<sel.length; i++) {sel[i].classList.remove("selected")}
+        sel[x].classList.add("selected");
+        switch (x) {
+          case 0: className = "u"; break;  // Universal class. Hard-coded.
+          case 1: className = "t1block"; break;
+          case 2: className = "t1inline"; break;
+          case 3: className = "t1none"; break;
+          case 4: className = "t1table"; break;
+          case 5: className = "t1list"; break;
+          case 6: className = "t1format"; break;
+          case 7: className = "t1form"; break;
+          case 8: className = "t1media"; break;
+          case 9: className = "t1page"; break;
+        }
+        let parity = false
+        for (let i=0; i<all.length; i++) {
+          all[i].classList.remove("teven");
+          all[i].classList.remove("todd");
+          if (all[i].classList.contains(className) || className == "u") {
+            all[i].classList.remove("tnope");
+            if (parity) {
+              all[i].classList.add("teven");
+            } else {
+              all[i].classList.add("todd");
+            }
+            parity = !parity
+          } else {
+            all[i].classList.add("tnope");
+          }
+        }
+      }
+
+      select(9);
+    </script>
+    <h3 id="Ch1-1">Page model example</h3>
+      <div style="margin-left:40px">
+        <div style="background-color:#7F7FFF;color:black;width:500px;text-align:center;
+          border-radius:10px;padding:10px 0px;margin-bottom:5px">
+          &lt;nav&gt;
+          <div style="background-color:#EDEEFF;width:100px;padding:0px 10px;float:right;
+          margin-right:50px;margin-left:0px;vertical-align:middle;border-radius:50px">
+          &lt;search&gt;</div>
+        </div>
+        <div style="background-color:#7F7F9F;width:100px;padding:80px 10px;margin-bottom:5px;
+          border-radius:10px;float:left;color:black;text-align:center;margin-right:5px;">
+          &lt;div&gt;<br>&lt;aside&gt;<br>etc.</div>
+        <div style="background-color:#595999;width:375px;padding:99px 0px;color:black;
+          border-radius:10px;float:left;text-align:center;">&lt;main&gt;</div>
+        <div style="background-color:#7F7F7F;width:500px;padding:10px 0px;color:black;
+          border-radius:10px;margin-bottom:10px;clear:both;text-align:center;">
+          &lt;footer&gt;</div>
+      </div>
+    <h2 id="Ch2">CSS properties</h2>
+  </body>
+</html>
