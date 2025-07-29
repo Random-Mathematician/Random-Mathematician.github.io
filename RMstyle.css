@@ -3,7 +3,8 @@ h1, h2, h3, p {color:#EDEEFF;}
 h1 {text-align:center;padding:10px;background-color:#292A4B;}
 h2, h3 {clear:left;margin-left:10px;margin-bottom:10px;}
 table {color:#EDEEFF;padding:5px;margin:20px;padding-top:0px;margin-top:0px;}
-.conttable {background-color:#292A4B;border:1px solid #EDEEFF;float:left;}
+.conttable {background-color:#292A4B;border:1px solid #EDEEFF;float:left;
+    padding:5px;margin:20px;padding-top:0px;margin-top:0px;}
 table, tr, th, td {border:1px solid #EDEEFF;border-collapse:collapse;}
 th, td {padding-left:7px;padding-right:7px;padding-top:2px;padding-bottom:2px;}
 .theader {font-size:18px;background-color: #292A4B;}
