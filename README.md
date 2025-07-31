@@ -48,3 +48,4 @@ What it's already been done:
 - (07-28) Creating the repository, cloning and deploying.
 - (07-29) Separating the global CSS into its own stylesheet for convenience.
 - (07-29) Writing this README.
+- (07-31) Redoing the formatting for tags and variables.
