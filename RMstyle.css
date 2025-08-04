@@ -18,5 +18,7 @@ a:hover {color:#9999A5;}
 a:active {color:#7F7FFF;}
 var {background-color:rgba(255,255,255,10%);padding:0px 2px;
     border-radius:5px;color:#ff7f7f;}
-  span.tag {background-color:rgba(255,255,255,10%);padding:0px 2px;
+span.tag {background-color:rgba(255,255,255,10%);padding:0px 2px;
     border-radius:5px;color:#7fff7f;}
+span.tag::before {content:"<";}
+span.tag::after {content:">";}
