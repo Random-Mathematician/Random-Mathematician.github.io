@@ -16,6 +16,7 @@
       .selected {background-color:#2f204f;color:#EDEEFF;border:1px solid #EDEEFF}
       .example-layout {background-color:#8F8FB5;color:black;text-align:center;
         border-radius:8px;box-sizing:border-box;}
+      .example-layout.tmsingleton {width:100px;height:20px;float:left;margin:0px 5px 5px 0px;}
     </style>
   </head>
   <body>
@@ -1172,23 +1173,63 @@
 
       select(0);
     </script>
-    <h3 id="Ch1-1">Page model example</h3>
-      <div style="margin-left:40px;width:500px;">
-        <div class="example-layout" style="width:500px;height:40px;padding:10px 0px;
-          margin-bottom:5px;">&lt;header&gt;</div>
-        <div class="example-layout" style="width:500px;height:30px;padding:5px 0px;
-          margin-bottom:5px;position:relative;">&lt;nav&gt;
-          <div class="example-layout" style="background-color:#EDEEFF;width:100px;
-          height:20px;position:absolute;right:50px;top:5px;border-radius:20px;">
-          &lt;search&gt;</div>
-        </div>
-        <div class="example-layout" style="width:100px;height:200px;padding:65px 0px;
-          float:left;margin:0px 5px 5px 0px;">&lt;div&gt;<br>&lt;aside&gt;<br>etc.</div>
-        <div class="example-layout" style="width:395px;height:200px;padding:85px 0px;
-          float:left;margin-bottom:5px;">&lt;main&gt;</div>
-        <div class="example-layout" style="width:500px;height:50px;padding:15px 0px;
-          margin-top:5px;clear:both;">&lt;footer&gt;</div>
+    <div style="display:flex;overflow:auto;">
+    <div style="margin:0px 80px 0px 40px;width:500px;">
+      <h3 id="Ch1-1" style="text-align:center;">Page model example</h3>
+      <div class="example-layout" style="width:500px;height:40px;padding:10px 0px;
+        margin-bottom:5px;">&lt;header&gt;</div>
+      <div class="example-layout" style="width:500px;height:30px;padding:5px 0px;
+        margin-bottom:5px;position:relative;">&lt;nav&gt;
+        <div class="example-layout" style="background-color:#EDEEFF;width:100px;
+        height:20px;position:absolute;right:50px;top:5px;border-radius:20px;">
+        &lt;search&gt;</div>
       </div>
+      <div class="example-layout" style="width:100px;height:200px;padding:65px 0px;
+        float:left;margin:0px 5px 5px 0px;">&lt;div&gt;<br>&lt;aside&gt;<br>etc.</div>
+      <div class="example-layout" style="width:395px;height:200px;padding:85px 0px;
+        float:left;margin-bottom:5px;">&lt;main&gt;</div>
+       <div class="example-layout" style="width:500px;height:50px;padding:15px 0px;
+        margin-top:5px;clear:both;">&lt;footer&gt;</div>
+    </div>
+    <div style="width:420px;">
+      <h3 id="Ch1-1" style="text-align:center;">Table element diagram</h3>
+      <div class="example-layout" style="width:100px;height:395px;padding:175px 0px;
+        margin-right:5px;float:left;">&lt;table&gt;</div>
+      <div class="example-layout" style="width:310px;height:20px;float:left;
+        margin:0px 5px 5px 0px;">&lt;caption&gt;</div>
+      <div class="example-layout" style="width:205px;height:70px;padding-top:25px;float:left;
+        margin:0px 5px 5px 0px;">&lt;colgroup&gt;</div>
+      <div class="example-layout tmsingleton">&lt;col&gt;</div>
+      <div class="example-layout tmsingleton">&lt;col&gt;</div>
+      <div class="example-layout tmsingleton">&lt;col&gt;</div>
+      <div class="example-layout" style="width:100px;height:70px;padding-top:25px;float:left;
+        margin:0px 5px 5px 0px;">&lt;thead&gt;</div>
+      <div class="example-layout" style="width:100px;height:70px;padding-top:25px;float:left;
+        margin:0px 5px 5px 0px;">&lt;tr&gt;</div>
+      <div class="example-layout tmsingleton">&lt;th&gt;</div>
+      <div class="example-layout tmsingleton">&lt;th&gt;</div>
+      <div class="example-layout tmsingleton">&lt;th&gt;</div>
+      <div class="example-layout" style="width:100px;height:145px;padding-top:60px;float:left;
+        margin:0px 5px 5px 0px;">&lt;tbody&gt;</div>
+      <div class="example-layout" style="width:100px;height:70px;padding-top:25px;float:left;
+        margin:0px 5px 5px 0px;">&lt;tr&gt;</div>
+      <div class="example-layout tmsingleton">&lt;td&gt;</div>
+      <div class="example-layout tmsingleton">&lt;td&gt;</div>
+      <div class="example-layout tmsingleton">&lt;td&gt;</div>
+      <div class="example-layout" style="width:100px;height:70px;padding-top:25px;float:left;
+        margin:0px 5px 5px 0px;">&lt;tr&gt;</div>
+      <div class="example-layout tmsingleton">&lt;td&gt;</div>
+      <div class="example-layout tmsingleton">&lt;td&gt;</div>
+      <div class="example-layout tmsingleton">&lt;td&gt;</div>
+      <div class="example-layout" style="width:100px;height:70px;padding-top:25px;float:left;
+        margin:0px 5px 5px 0px;">&lt;tfoot&gt;</div>
+      <div class="example-layout" style="width:100px;height:70px;padding-top:25px;float:left;
+        margin:0px 5px 5px 0px;">&lt;tr&gt;</div>
+      <div class="example-layout tmsingleton">&lt;td&gt;</div>
+      <div class="example-layout tmsingleton">&lt;td&gt;</div>
+      <div class="example-layout tmsingleton">&lt;td&gt;</div>
+    </div>
+    </div>
     <h2 id="Ch2">CSS properties</h2>
   </body>
 </html>
