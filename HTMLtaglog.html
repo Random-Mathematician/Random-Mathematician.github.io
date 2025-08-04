@@ -14,6 +14,8 @@
       .sel:hover {background-color:#1f204f}
       .sel:active {border:1px groove #9999A5;}
       .selected {background-color:#2f204f;color:#EDEEFF;border:1px solid #EDEEFF}
+      .example-layout {background-color:#8F8FB5;color:black;text-align:center;
+        border-radius:8px;box-sizing:border-box;}
     </style>
   </head>
   <body>
@@ -1171,22 +1173,21 @@
       select(0);
     </script>
     <h3 id="Ch1-1">Page model example</h3>
-      <div style="margin-left:40px">
-        <div style="background-color:#7F7FFF;color:black;width:500px;text-align:center;
-          border-radius:10px;padding:10px 0px;margin-bottom:5px">
-          &lt;nav&gt;
-          <div style="background-color:#EDEEFF;width:100px;padding:0px 10px;float:right;
-          margin-right:50px;margin-left:0px;vertical-align:middle;border-radius:50px">
+      <div style="margin-left:40px;width:500px;">
+        <div class="example-layout" style="width:500px;height:40px;padding:10px 0px;
+          margin-bottom:5px;">&lt;header&gt;</div>
+        <div class="example-layout" style="width:500px;height:30px;padding:5px 0px;
+          margin-bottom:5px;position:relative;">&lt;nav&gt;
+          <div class="example-layout" style="background-color:#EDEEFF;width:100px;
+          height:20px;position:absolute;right:50px;top:5px;border-radius:20px;">
           &lt;search&gt;</div>
         </div>
-        <div style="background-color:#7F7F9F;width:100px;padding:80px 10px;margin-bottom:5px;
-          border-radius:10px;float:left;color:black;text-align:center;margin-right:5px;">
-          &lt;div&gt;<br>&lt;aside&gt;<br>etc.</div>
-        <div style="background-color:#595999;width:375px;padding:99px 0px;color:black;
-          border-radius:10px;float:left;text-align:center;">&lt;main&gt;</div>
-        <div style="background-color:#7F7F7F;width:500px;padding:10px 0px;color:black;
-          border-radius:10px;margin-bottom:10px;clear:both;text-align:center;">
-          &lt;footer&gt;</div>
+        <div class="example-layout" style="width:100px;height:200px;padding:65px 0px;
+          float:left;margin:0px 5px 5px 0px;">&lt;div&gt;<br>&lt;aside&gt;<br>etc.</div>
+        <div class="example-layout" style="width:395px;height:200px;padding:85px 0px;
+          float:left;margin-bottom:5px;">&lt;main&gt;</div>
+        <div class="example-layout" style="width:500px;height:50px;padding:15px 0px;
+          margin-top:5px;clear:both;">&lt;footer&gt;</div>
       </div>
     <h2 id="Ch2">CSS properties</h2>
   </body>

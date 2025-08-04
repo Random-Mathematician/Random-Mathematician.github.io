@@ -21,7 +21,7 @@ Again, the site is under construction. But the pages that are *accesible to the 
 Finally, some other files are present to make the website work:
 - **The README** - You are here!
 - [The logo](icon.png) - The one you can see at the start of this README.
-- [A CSS generic stylesheet](RMstyle.css) - To give the pages this look.
+- [A CSS generic stylesheet](RMstyle.css) - To give the pages their look.
 
 ## Known issues and bugs
 
@@ -49,3 +49,10 @@ What it's already been done:
 - (07-29) Separating the global CSS into its own stylesheet for convenience.
 - (07-29) Writing this README.
 - (07-31) Redoing the formatting for tags and variables.
+- (08-04) Adding the DejaVu Serif font to the project.
+
+## About the fonts used
+
+The *DejaVu Serif* and *DejaVu Serif Bold* fonts are used in this project. Both TTF files are found inside the [fonts](/fonts/) folder and are intended only for use within the site.
+
+The *DejaVu* fonts are a font family based on the Bitstream Vera™ Fonts  v1.10, with the purpose of providing a wider character set. The files were obtained from [the DejaVu GitHub page](https://dejavu-fonts.github.io/) and there resides the information and documentation. A copy of the [description](/fonts/DejaVu.md) of the fonts and their [license](/fonts/LICENSE) from said page can be found inside the fonts folder at their respective links.

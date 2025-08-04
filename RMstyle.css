@@ -1,5 +1,7 @@
+@font-face {font-family:"DejaVu Serif";src:url(fonts/DejaVuSerif.ttf)}
+@font-face {font-family:"DejaVu Serif";src:url(fonts/DejaVuSerif-Bold.ttf);font-weight:bold;}
 body {background-color:#0F0F1F;color:#EDEEFF;font-family:sans-serif;}
-h1, h2, h3 {color:#EDEEFF;font-family:serif;}
+h1, h2, h3 {color:#EDEEFF;font-family:"DejaVu Serif", serif;}
 h1 {text-align:center;padding:10px;background-color:#292A4B;}
 h2, h3 {clear:left;margin-left:10px;margin-bottom:10px;}
 table {color:#EDEEFF;padding:5px;margin:20px;padding-top:0px;margin-top:0px;}
