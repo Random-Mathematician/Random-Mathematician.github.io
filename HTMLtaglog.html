@@ -9,11 +9,11 @@
     <style>
       .buttonlist {display:flex;margin:0px 0px 10px 10px;}
       .buttonlist div {margin:0px 0px 0px 10px;padding:0px;}
-      .buttonlist div button {margin:0px;float:left;padding:3px 6px;}
-      .sel {background-color:#0f204f;border:none;cursor:pointer;color:#BEBECA;}
-      .sel:hover {background-color:#1f204f}
-      .sel:active {border:1px groove #9999A5;}
-      .selected {background-color:#2f204f;color:#EDEEFF;border:1px solid #EDEEFF}
+      .buttonlist button {margin:0px;float:left;padding:3px 6px;background-color:#0f204f;
+        border:none;cursor:pointer;color:#BEBECA;}
+      .buttonlist button:hover {background-color:#1f204f;}
+      .buttonlist button:active {border:1px groove #9999A5;}
+      .buttonlist .selected {background-color:#2f204f;color:#EDEEFF;border:1px solid #EDEEFF;}
       .example-layout {background-color:#8F8FB5;color:black;text-align:center;
         border-radius:8px;box-sizing:border-box;}
       .example-layout.tmsingleton {width:100px;height:20px;float:left;margin:0px 5px 5px 0px;}
@@ -33,16 +33,16 @@
     <div class="buttonlist">
       Elements to show:
       <div>
-        <button class="sel" onclick="select(0)">All</button>
-        <button class="sel" onclick="select(1)">Block</button>
-        <button class="sel" onclick="select(2)">Inline</button>
-        <button class="sel" onclick="select(3)">Not displayed</button>
-        <button class="sel" onclick="select(4)">Table</button>
-        <button class="sel" onclick="select(5)">Listings</button>
-        <button class="sel" onclick="select(6)">Formatting</button>
-        <button class="sel" onclick="select(7)">Form</button>
-        <button class="sel" onclick="select(8)">Media</button>
-        <button class="sel" onclick="select(9)">Page content</button>
+        <button class="sel1" onclick="select(0,1)">All</button>
+        <button class="sel1" onclick="select(1,1)">Block</button>
+        <button class="sel1" onclick="select(2,1)">Inline</button>
+        <button class="sel1" onclick="select(3,1)">Not displayed</button>
+        <button class="sel1" onclick="select(4,1)">Table</button>
+        <button class="sel1" onclick="select(5,1)">Listings</button>
+        <button class="sel1" onclick="select(6,1)">Formatting</button>
+        <button class="sel1" onclick="select(7,1)">Form</button>
+        <button class="sel1" onclick="select(8,1)">Media</button>
+        <button class="sel1" onclick="select(9,1)">Page content</button>
       </div>
     </div>
     <table id="htmltags">
@@ -69,11 +69,12 @@
       <tr class="t1inline">
         <td>Anchor</td>
         <td><span class="tag">a</span></td>
-        <td>Defines a hyperlink to open the page <var>href</var> (in language <var>hreflang</var> and of
-          type <var>rel</var> relative to the current page; MIME type <var>type</var>) at location
-          <var>target</var> or download <var>download</var> to the user's device. The content is optimized
-          for <var>media</var>.<br>When clicked, the URL(s) <var>ping</var> are sent a background HTTP POST
-          request as a tracking measure and <var>referrerpolicy</var> is sent to the destination page.
+        <td>Defines a hyperlink to open the page <var>href</var> (in language <var>hreflang</var>
+          and of type <var>rel</var> relative to the current page; MIME type <var>type</var>) at
+          location <var>target</var> or download <var>download</var> to the user's device. The
+          content is present in devices <var>media</var>.<br>When clicked, the URL(s)
+          <var>ping</var> are sent a background HTTP POST request as a tracking measure and
+          <var>referrerpolicy</var> is sent to the destination page.
         </td>
         <td><var>download</var><br>
           <var>href</var><br>
@@ -103,11 +104,12 @@
       <tr class="t1none t1media">
         <td>Area</td>
         <td><span class="tag">area</span></td>
-        <td>Used inside <span class="tag">map</span>, it defines a clickable area inside an image.<br>
-          Depending on <var>shape</var>, the area may be a rectangle, circle or polygon determined by
-          <var>coords</var>. When clicked, it will open the page <var>href</var> at location <var>target</var>
-          or download <var>download</var> to the user's device, according to attributes <var>hreflang</var>,
-          <var>rel</var>, <var>type</var>, <var>media</var>, <var>ping</var> and <var>referrerpolicy</var>.<br>
+        <td>Used inside <span class="tag">map</span>, it defines a clickable area inside an
+          image.<br>Depending on <var>shape</var>, the area may be a rectangle, circle or
+          polygon determined by <var>coords</var>. When clicked, it will open the page
+          <var>href</var> at location <var>target</var> or download <var>download</var> to
+          the user's device, according to attributes <var>hreflang</var>, <var>rel</var>,
+          <var>type</var>, <var>media</var>, <var>ping</var> and <var>referrerpolicy</var>.<br>
           If the image cannot be loaded, <var>alt</var> will display in that area instead.</td>
         <td><var>alt</var><br>
           <var>coords</var><br>
@@ -137,11 +139,11 @@
       <tr class="t1inline t1media">
         <td>Audio</td>
         <td><span class="tag">audio</span></td>
-        <td>An embedded audio stream player that will play <var>src</var>. It will start as soon as
-          it loads given <var>autoplay</var> and as specified by <var>preload</var>, start again after
-          it ends given <var>loop</var> or not play given <var>muted</var>. It comes with added buttons
-          dependent on <var>controls</var>.<br>Its argument replaces the audio when it is not
-          avaliable.</td>
+        <td>An embedded audio stream player that will play <var>src</var>. It will start as soon
+          as it loads given <var>autoplay</var> and as specified by <var>preload</var>, start
+          again after it ends given <var>loop</var> or not play given <var>muted</var>. It comes
+          with added buttons dependent on <var>controls</var>.<br>Its argument replaces the audio
+          when it is not avaliable.</td>
         <td><var>autoplay</var><br>
           <var>controls</var><br>
           <var>loop</var><br>
@@ -159,8 +161,8 @@
       <tr class="t1none">
         <td>Base</td>
         <td><span class="tag">base</span></td>
-        <td>Specifies the predefined URL <var>href</var> and target <var>target</var> references across
-          the page.<br>
+        <td>Specifies the predefined URL <var>href</var> and target <var>target</var> references
+          across the page.<br>
           It should be unique and be placed inside <span class="tag">head</span>.</td>
         <td><var>href</var><br>
           <var>terget</var><br>
@@ -183,7 +185,8 @@
       <tr class="t1block t1format">
         <td>Block Quote</td>
         <td><span class="tag">blockquote</span></td>
-        <td>Block text quoted from another source <var>cite</var>.<br>By default, it is indented.</td>
+        <td>Block text quoted from another source <var>cite</var>.<br>By default, it is indented.
+        </td>
         <td><var>cite</var><br>Globals</td>
       </tr>
       <tr class="t1block">
@@ -202,16 +205,17 @@
       <tr class="t1inline t1form">
         <td>Button</td>
         <td><span class="tag">button</span></td>
-        <td>A clickable button of type <var>type</var> that will trigger an event <var>onclick</var>
-          when clicked. It cannot be clicked given <var>disabled</var> and it starts as selected
-          given <var>autofocus</var>.<br>
+        <td>A clickable button of type <var>type</var> that will trigger an event
+          <var>onclick</var> when clicked. It cannot be clicked given <var>disabled</var> and it
+          starts as selected given <var>autofocus</var>.<br>
           When inside a form, or linked to it by <var>form</var>, its default values are
-          <var>name</var>=<var>value</var>. Furthermore, when it is a "submit" button, <var>formaction</var>
-          can override the form's <var>action</var> attribute; <var>formenctype</var>, its <var>enctype</var>;
-          <var>formmethod</var>, its <var>method</var>; <var>formnovalidate</var>, its <var>novalidate</var>; and
-          <var>formtarget</var>, its <var>target</var>.<br>
-          It can also show, hide or toggle (depending on <var>popovertargetaction</var>) a pop-over
-          element <var>popovertarget</var>, if given.</td>
+          <var>name</var>=<var>value</var>. Furthermore, when it is a "submit" button,
+          <var>formaction</var> can override the form's <var>action</var> attribute;
+          <var>formenctype</var>, its <var>enctype</var>; <var>formmethod</var>, its
+          <var>method</var>; <var>formnovalidate</var>, its <var>novalidate</var>; and
+          <var>formtarget</var>, its <var>target</var>.<br>It can also show, hide or toggle
+          (depending on <var>popovertargetaction</var>) a pop-over element
+          <var>popovertarget</var>, if given.</td>
         <td><var>autofocus</var><br>
           <var>disabled</var><br>
           <var>form</var><br>
@@ -230,14 +234,15 @@
       <tr class="t1inline t1media">
         <td>Canvas</td>
         <td><span class="tag">canvas</span></td>
-        <td>A graphic window of dimensions <var>width</var> by <var>height</var> to draw on via a script.
-          Its argument replaces the canvas when it is not avaliable.</td>
+        <td>A graphic window of dimensions <var>width</var> by <var>height</var> to draw on via
+          script. Its argument replaces the canvas when it is not avaliable.</td>
         <td><var>height</var><br><var>width</var><br>Globals</td>
       </tr>
       <tr class="t1table">
         <td>Caption</td>
         <td><span class="tag">caption</span></td>
-        <td>Creates a caption for a table immediately after the <span class="tag">table</span> tag.</td>
+        <td>Creates a caption for a table immediately after the <span class="tag">table</span>
+          tag.</td>
         <td>Globals</td>
       </tr>
       <tr class="t1inline t1format">
@@ -256,8 +261,8 @@
       <tr class="t1none t1table">
         <td>Column</td>
         <td><span class="tag">col</span></td>
-        <td>Specifies the formatting style for a column in a <span class="tag">colgroup</span>.<br>
-          It can cover a single column or <var>span</var> columns.</td>
+        <td>Specifies the formatting style for a column in a <span class="tag">colgroup</span>.
+          <br>It can cover a single column or <var>span</var> columns.</td>
         <td><var>span</var><br>Globals</td>
       </tr>
       <tr class="t1none t1table">
@@ -281,8 +286,8 @@
       <tr class="t1block t1list">
         <td>Description Data</td>
         <td><span class="tag">dd</span></td>
-        <td>The description for a term (<span class="tag">dt</span>) in a description list (<span class="tag">dl</span>).<br>
-          By default, it is indented.</td>
+        <td>The description for a term (<span class="tag">dt</span>) in a description list
+          (<span class="tag">dl</span>).<br>By default, it is indented.</td>
         <td>Globals</td>
       </tr>
       <tr class="t1inline t1format">
@@ -296,8 +301,9 @@
       <tr class="t1block t1page">
         <td>Details</td>
         <td><span class="tag">details</span></td>
-        <td>Creates an openable widget headed by an inner <span class="tag">summary</span>. By default, it is
-          closed (or open given <var>open</var>), and when open, it will show its arguments below.</td>
+        <td>Creates an openable widget headed by an inner <span class="tag">summary</span>. By
+          default, it is closed (or open given <var>open</var>), and when open, it will show its
+          arguments below.</td>
         <td><var>open</var><br>Globals</td>
       </tr>
       <tr class="t1inline t1format">
@@ -322,13 +328,15 @@
       <tr class="t1block t1list">
         <td>Description List</td>
         <td><span class="tag">dl</span></td>
-        <td>A description list element nesting <span class="tag">dt</span> - <span class="tag">dd</span> pairs.</td>
+        <td>A description list element nesting <span class="tag">dt</span> -
+          <span class="tag">dd</span> pairs.</td>
         <td>Globals</td>
       </tr>
       <tr class="t1block t1list">
         <td>Description Term</td>
         <td><span class="tag">dd</span></td>
-        <td>A term with a description (<span class="tag">dd</span>) inside a description list (<span class="tag">dl</span>).</td>
+        <td>A term with a description (<span class="tag">dd</span>) inside a description list
+          (<span class="tag">dl</span>).</td>
         <td>Globals</td>
       </tr>
       <tr class="t1inline t1format">
@@ -340,8 +348,9 @@
       <tr class="t1inline t1media">
         <td>Embedding</td>
         <td><span class="tag">embed</span></td>
-        <td>A container for an external resource of type <var>type</var> from location <var>src</var>
-          of dimensions <var>width</var> by <var>height</var>. It is outdated, though.</td>
+        <td>A container for an external resource of type <var>type</var> from location
+          <var>src</var> of dimensions <var>width</var> by <var>height</var>. It is outdated,
+          though.</td>
         <td><var>height</var><br>
           <var>src</var><br>
           <var>type</var><br>
@@ -351,9 +360,10 @@
       <tr class="t1block t1form">
         <td>Field Set</td>
         <td><span class="tag">fieldset</span></td>
-        <td>A box grouper of related elements from the parent form or an external one <var>form</var>.
-          All of its inputs are disabled given <var>disabled</var> and it can have a name <var>name</var>.
-          <br>It may also be titled by an inner <span class="tag">legend</span>.</td>
+        <td>A box grouper of related elements from the parent form or an external one
+          <var>form</var>. All of its inputs are disabled given <var>disabled</var> and it can
+          have a name <var>name</var>. <br>It may also be titled by an inner
+          <span class="tag">legend</span>.</td>
         <td><var>disabled</var><br>
           <var>form</var><br>
           <var>name</var><br>
@@ -362,7 +372,8 @@
       <tr class="t1block t1media">
         <td>Figure Caption</td>
         <td><span class="tag">figcaption</span></td>
-        <td>Creates caption text for an image inside a <span class="tag">figure</span> element.</td>
+        <td>Creates caption text for an image inside a <span class="tag">figure</span> element.
+        </td>
         <td>Globals</td>
       </tr>
       <tr class="t1block t1media">
@@ -381,13 +392,13 @@
       <tr class="t1block t1form">
         <td>Form</td>
         <td><span class="tag">form</span></td>
-        <td>An HTML form. Serves as a container for <span class="tag">input</span> and related elements to send
-          their collected data (in a character set <var>accept-charset</var>) to <var>action</var>
-          (in relation <var>rel</var> to the current document) through an HTML <var>method</var> (in
-          an encoding <var>enctype</var> for POST requests) at location <var>target</var>. It can have
-          a name <var>name</var>, enable autocompletion for inner inputs given <var>autocomplete</var>
-          and disable their validation given <var>novalidate</var>.
-        </td>
+        <td>An HTML form. Serves as a container for <span class="tag">input</span> and related
+          elements to send their collected data (in a character set <var>accept-charset</var>)
+          to <var>action</var> (in relation <var>rel</var> to the current document) through an
+          HTML <var>method</var> (in an encoding <var>enctype</var> for POST requests) at
+          location <var>target</var>. It can have a name <var>name</var>, enable autocompletion
+          for inner inputs given <var>autocomplete</var> and disable their validation given
+          <var>novalidate</var>.</td>
         <td><var>accept-charset</var><br>
           <var>action</var><br>
           <var>autocomplete</var><br>
@@ -413,8 +424,8 @@
       <tr class="t1none">
         <td>Head</td>
         <td><span class="tag">head</span></td>
-        <td>The document's metadata container.<br>
-          It is directly inside <span class="tag">html</span> and above <span class="tag">body</span>.</td>
+        <td>The document's metadata container.<br>It is directly inside
+          <span class="tag">html</span> and above <span class="tag">body</span>.</td>
         <td>Globals</td>
       </tr>
       <tr class="t1block t1page">
@@ -439,8 +450,9 @@
       <tr class="t1block">
         <td>HyperText Markup Language</td>
         <td><span class="tag">html</span></td>
-        <td>The root element. Contains all other elements except <span class="tag">!DOCTYPE</span>.<br>
-          If XML support is needed, <var>xmlns</var> specifies its namespace attribute.</td>
+        <td>The root element. Contains all other elements except
+          <span class="tag">!DOCTYPE</span>.<br> If XML support is needed, <var>xmlns</var>
+          specifies its namespace attribute.</td>
         <td><var>xmlns</var><br>Globals</td>
       </tr>
       <tr class="t1inline t1format">
@@ -453,14 +465,14 @@
         <td>Inline Frame</td>
         <td><span class="tag">iframe</span></td>
         <td>Embeds another HTML page, either from an exernal URL <var>src</var> or an internal doc
-          <var>srcdoc</var>, into the document through a subwindow of dimensions <var>width</var> by
-          <var>height</var>. It may have a name <var>name</var> and it may defer its load with
+          <var>srcdoc</var>, into the document through a subwindow of dimensions <var>width</var>
+          by <var>height</var>. It may have a name <var>name</var> and it may defer its load with
           <var>loading</var>="lazy" (default is "eager", loading it immediately).<br>
           The frame sends <var>referrerpolicy</var> to the destination, and that inside page is
-          restricted by a feature policy <var>allow</var> and cannot perform certain actions unless
-          specified by <var>allowfullscreen</var>, <var>allowpaymentrequest</var> and <var>sandbox</var>
-          (which can contain: "allow-forms", "allow-pointer-lock", "allow-popups",
-          "allow-same-origin", "allow-scripts", "allow-top-navigation").</td>
+          restricted by a feature policy <var>allow</var> and cannot perform certain actions
+          unless specified by <var>allowfullscreen</var>, <var>allowpaymentrequest</var> and
+          <var>sandbox</var> (which can contain: "allow-forms", "allow-pointer-lock",
+          "allow-popups", "allow-same-origin", "allow-scripts", "allow-top-navigation").</td>
         <td><var>allow</var><br>
           <var>allowfullscreen</var><br>
           <var>allowpaymentrequest</var><br>
@@ -477,16 +489,16 @@
       <tr class="t1inline t1media">
         <td>Image</td>
         <td><span class="tag">img</span></td>
-        <td>Defines a space of dimensions <var>width</var> by <var>height</var> to hold an image from
-          <var>src</var> (or multiple from <var>srcset</var> to use depending on <var>sizes</var>), or some
-          text <var>alt</var> if it's not avaliable.<br>
-          The image may be a map (it may send the coordinates of a click to a page in a
-          parent <span class="tag">a</span>'s <var>href</var>) given <var>ismap</var> or use a client-side map <var>usemap</var>
-          ("#" + the <var>id</var> of a <span class="tag">map</span>), it can have a description <var>longdesc</var>, and
-          it may defer its load with <var>loading</var>="lazy" (default is "eager", loading it
-          immediately).<br>
-          Additionally, the source handles HTTP CORS requests as specified by <var>crossorigin</var>
-          and sends <var>referrerpolicy</var> to the destination page.
+        <td>Defines a space of dimensions <var>width</var> by <var>height</var> to hold an image
+          from <var>src</var> (or multiple from <var>srcset</var> to use depending on
+          <var>sizes</var>), or some text <var>alt</var> if it's not avaliable.<br>
+          The image may be a map (it may send the coordinates of a click to a page in a parent
+          <span class="tag">a</span>'s <var>href</var>) given <var>ismap</var> or use a
+          client-side map <var>usemap</var> ("#" + the <var>id</var> of a
+          <span class="tag">map</span>), it can have a description <var>longdesc</var>, and it
+          may defer its load with <var>loading</var>="lazy" (default is "eager", loading it
+          immediately).<br> Additionally, the source handles HTTP CORS requests as specified by
+          <var>crossorigin</var> and sends <var>referrerpolicy</var> to the destination page.
         </td>
         <td><var>alt</var><br>
           <var>crossorigin</var><br>
@@ -505,61 +517,65 @@
       <tr class="t1inline t1form">
         <td>Input</td>
         <td><span class="tag">input</span></td>
-        <td>The standart input field for any form, sending information in <var>name</var>=<var>value</var>
-          pairs when submitted.<br>It can take on a multitude of forms depending on its <var>type</var>:
+        <td>The standart input field for any form, sending information in
+          <var>name</var>=<var>value</var> pairs when submitted.<br>It can take on a multitude of
+          forms depending on its <var>type</var>:
           <br><ul style="margin-top:5px;margin-bottom:5px;">
-            <li>"button" creates a button that behaves like <span class="tag">button</span>. Its <var>value</var>
-              is its displayed text and <var>popovertarget</var> and <var>popovertargetaction</var> are
-              used the same way as in a regular button.</li>
+            <li>"button" creates a button that behaves like <span class="tag">button</span>. Its
+              <var>value</var> is its displayed text and <var>popovertarget</var> and
+              <var>popovertargetaction</var> are used the same way as in a regular button.</li>
             <li>"checkbox" is one option from a multiple selection list. It is preselected
               given <var>checked</var>.</li>
             <li>"color" spawns a color picker, and sends the chosen value in hexadecimal.</li>
-            <li>"date" spawns a date selector. Only valid dates between <var>min</var> and <var>max</var>
-              may be chosen. This applies for all date and time types.</li>
+            <li>"date" spawns a date selector. Only valid dates between <var>min</var> and
+              <var>max</var> may be chosen. This applies for all date and time types.</li>
             <li>"datetime-local" spawns a date-time selector. It is independent of timezone.</li>
-            <li>"email" creates a text field to introduce an email adress. The validity of the user
-              input is checked automatically. Additionally, more than one address is allowed
+            <li>"email" creates a text field to introduce an email adress. The validity of the
+              user input is checked automatically. Additionally, more than one address is allowed
               given <var>multiple</var>.</li>
             <li>"file" creates a file selection button, and sends the filename. More than one file
-              is allowed given <var>multiple</var>, and only files of type <var>accept</var> are chosen.
-            </li>
+              is allowed given <var>multiple</var>, and only files of type <var>accept</var> are
+              chosen.</li>
             <li>"hidden" sends additional information without it being displayed to the page.</li>
-            <li>"image" defines an image from <var>src</var> of dimensions <var>width</var> by <var>height</var>
-              to work as a submit button. If it cannot be loaded, <var>alt</var> will display instead.
-              Lastly, <var>formaction</var> can override the form's <var>action</var> attribute;
-              <var>formenctype</var>, its <var>enctype</var>; <var>formmethod</var>, its <var>method</var>;
-              <var>formnovalidate</var>, its <var>novalidate</var>; and <var>formtarget</var>, its
-              <var>target</var>.</li>
+            <li>"image" defines an image from <var>src</var> of dimensions <var>width</var> by
+              <var>height</var> to work as a submit button. If it cannot be loaded,
+              <var>alt</var> will display instead. Lastly, <var>formaction</var> can override the
+              form's <var>action</var> attribute; <var>formenctype</var>, its <var>enctype</var>;
+              <var>formmethod</var>, its <var>method</var>; <var>formnovalidate</var>, its
+              <var>novalidate</var>; and <var>formtarget</var>, its <var>target</var>.</li>
             <li>"month" spawns a date selector of only month and year.</li>
-            <li>"number" allows numbers between <var>min</var> and <var>max</var>, and at an interval of
-              <var>step</var>, in a number field.</li>
+            <li>"number" allows numbers between <var>min</var> and <var>max</var>, and at an
+              interval of <var>step</var>, in a number field.</li>
             <li>"password" creates a textbox that automatically hides text.</li>
             <li>"radio" is one option from a single selection list. It is preselected given
               <var>checked</var>.</li>
-            <li>"range" allows numbers between <var>min</var> and <var>max</var>, and at an interval of
-              <var>step</var>, in a slider. Its actual value is not automatically displayed.</li>
+            <li>"range" allows numbers between <var>min</var> and <var>max</var>, and at an
+              interval of <var>step</var>, in a slider. Its actual value is not automatically
+              displayed.</li>
             <li>"reset" creates a button that, when pressed, restores all inputs to their default
               state.</li>
             <li>"search" creates a textbox adequate for in-site or external searches.</li>
-            <li>"submit" creates a submit button to submit the form. Also, <var>formaction</var> can
-              override the form's <var>action</var> attribute; <var>formenctype</var>, its <var>enctype</var>;
-              <var>formmethod</var>, its <var>method</var>; <var>formnovalidate</var>, its <var>novalidate</var>;
-              and <var>formtarget</var>, its <var>target</var>.</li>
+            <li>"submit" creates a submit button to submit the form. Also, <var>formaction</var>
+              can override the form's <var>action</var> attribute; <var>formenctype</var>, its
+              <var>enctype</var>; <var>formmethod</var>, its <var>method</var>;
+              <var>formnovalidate</var>, its <var>novalidate</var>; and <var>formtarget</var>,
+              its <var>target</var>.</li>
             <li>"tel" creates a number field for a phone number.</li>
             <li>"text" creates a plain, free textbox.</li>
             <li>"time" spawns a time selector. It is independent of timezone.</li>
             <li>"url" creates a textbox for entering a URL. It is validated automatically.</li>
             <li>"week" spawns a date selector of whole weeks.</li>
           </ul>
-          Apart from <var>type</var>-specific attributes, others may be used. Given <var>autocomplete</var>,
-          the browser may suggest input possibilities. With <var>dirname</var>, the text direction is
-          also sent. Given <var>disabled</var>, an input is not modifiable nor sent. If the element is
-          outside a form, it may be linked to one <var>form</var>. A list of options for autocomplete
-          can be linked by <var>list</var>. The number of characters an input can take may be limited
-          to between <var>minlength</var> and <var>maxlength</var>, and its structure may be specified by
-          <var>pattern</var>. Given <var>readonly</var>, an input is unmodifiable but still sent. Given
-          <var>required</var>, the form is invalid without the input being filled/checked. And the
-          visual width of a textbox can be specified to be <var>size</var>.
+          Apart from <var>type</var>-specific attributes, others may be used. Given
+          <var>autocomplete</var>, the browser may suggest input possibilities. With
+          <var>dirname</var>, the text direction is also sent. Given <var>disabled</var>, an
+          input is not modifiable nor sent. If the element is outside a form, it may be linked
+          to one <var>form</var>. A list of options for autocomplete can be linked by
+          <var>list</var>. The number of characters an input can take may be limited to between
+          <var>minlength</var> and <var>maxlength</var>, and its structure may be specified by
+          <var>pattern</var>. Given <var>readonly</var>, an input is unmodifiable but still sent.
+          Given <var>required</var>, the form is invalid without the input being filled/checked.
+          And the visual width of a textbox can be specified to be <var>size</var>.
         </td>
         <td><var>accept</var><br>
           <var>alt</var><br>
@@ -612,8 +628,9 @@
       <tr class="t1inline t1form">
         <td>Label</td>
         <td><span class="tag">label</span></td>
-        <td>A label for a form element. It is inside its parent form or linked to it by <var>form</var>
-        and it is bound to its child element or to the element with id <var>for</var>.</td>
+        <td>A label for a form element. It is inside its parent form or linked to it by
+          <var>form</var> and it is bound to its child element or to the element with id
+          <var>for</var>.</td>
         <td><var>for</var><br><var>form</var><br>Globals</td>
       </tr>
       <tr class="t1block t1form">
@@ -625,38 +642,40 @@
       <tr class="t1list">
         <td>List Item</td>
         <td><span class="tag">li</span></td>
-        <td>An entry in a list. By default, it will be displayed with a bullet inside <span class="tag">ul</span>
-          and <span class="tag">menu</span>, or numbered (with number <var>value</var>) inside <span class="tag">ol</span>.</td>
+        <td>An entry in a list. By default, it will be displayed with a bullet inside
+          <span class="tag">ul</span> and <span class="tag">menu</span>, or numbered (with
+          number <var>value</var>) inside <span class="tag">ol</span>.</td>
         <td><var>value</var><br>Globals</td>
       </tr>
       <tr class="t1none t1media">
         <td>Link</td>
         <td><span class="tag">link</span></td>
-        <td>Defines a linked resource from <var>href</var> (in language <var>hreflang</var> and of media
-          type <var>type</var>) to use for the document. It can function differently depending on
-          <var>rel</var>:<br>
+        <td>Defines a linked resource from <var>href</var> (in language <var>hreflang</var> and
+          of media type <var>type</var>) to use for the document. It can function differently
+          depending on <var>rel</var>:<br>
           <ul style="margin-top:5px;margin-bottom:5px;">
             <li>"alternate" defines an alternate version of the document.</li>
             <li>"author" links to the page author.</li>
             <li>"dns-prefetch" fetches the target page's IP number (through DNS).</li>
             <li>"help" links to a help page.</li>
-            <li>"icon" defines an icon to go along the page's <span class="tag">title</span>. Its dimensions are
-              specified by <var>sizes</var>.</li>
+            <li>"icon" defines an icon to go along the page's <span class="tag">title</span>.
+              Its dimensions are specified by <var>sizes</var>.</li>
             <li>"license" links to copyright information.</li>
             <li>"next" links to the next page in a series or list.</li>
             <li>"pingback" links to the server handling the document's pingback.</li>
             <li>"preconnect" connects to the target resource origin.</li>
             <li>"prefetch" fetches and caches the target resource.</li>
-            <li>"preload" fetches, caches and sets up the target resource according to the <var>as</var>
-              attribute.</li>
+            <li>"preload" fetches, caches and sets up the target resource according to the
+              <var>as</var> attribute.</li>
             <li>"prerender" renders the target resource in the background, using bandwidth.</li>
             <li>"prev" links to the previous page in a series or list.</li>
-            <li>"search" provides a resource to use when searching through the document/domain.</li>
+            <li>"search" provides a resource to use when searching through the document/domain.
+            </li>
             <li>"stylesheet" defines a CSS file to use to format the document.</li>
           </ul>
-          Additionally, the link handles HTTP CORS requests as specified by <var>crossorigin</var> and
-          sends <var>referrerpolicy</var> to the destination page. Also, the link may load only when
-          conditions denoted by <var>media</var> are met.
+          Additionally, the link handles HTTP CORS requests as specified by <var>crossorigin</var>
+          and sends <var>referrerpolicy</var> to the destination page. Also, the link may load
+          only when conditions denoted by <var>media</var> are met.
         </td>
         <td><var>crossorigin</var><br>
           <var>href</var><br>
@@ -671,15 +690,16 @@
       <tr class="t1block t1page">
         <td>Main Content</td>
         <td><span class="tag">main</span></td>
-        <td>Groups all the proper content of a page, excluding sidebars or navigation resources.<br>
-          It is unique and never a child of another page content grouper element.</td>
+        <td>Groups all the proper content of a page, excluding sidebars or navigation resources.
+          <br>It is unique and never a child of another page content grouper element.</td>
         <td>Globals</td>
       </tr>
       <tr class="t1media">
         <td>Image Map</td>
         <td><span class="tag">map</span></td>
-        <td>Defines a list of clickable areas within an image alongside child <span class="tag">area</span> tags.<br>
-          It is linked to an image whose <var>usemap</var> attribute is equal to "#<var>name</var>".</td>
+        <td>Defines a list of clickable areas within an image alongside child
+          <span class="tag">area</span> tags.<br>It is linked to an image whose
+          <var>usemap</var> attribute is equal to "#<var>name</var>".</td>
         <td><var>name</var><br>Globals</td>
       </tr>
       <tr class="t1inline t1format">
@@ -691,18 +711,20 @@
       <tr class="t1block t1list">
         <td>Unordered List</td>
         <td><span class="tag">menu</span><br><span class="tag">ul</span></td>
-        <td>Defines an unordered list, bulleted by default. It groups <span class="tag">li</span> elements.</td>
+        <td>Defines an unordered list, bulleted by default. It groups <span class="tag">li</span>
+          elements.</td>
         <td>Globals</td>
       </tr>
       <tr class="t1none">
         <td>Metadata</td>
         <td><span class="tag">meta</span></td>
-        <td>Information about the page data. Depending on <var>name</var>, it can define the application
-          name (application-name), authorship (author), description (description), generating
-          software package (generator), keywords (keywords), and viewport settings (viewport). The
-          values for these are specified in <var>content</var>. A character set can also be set by
-          <var>charset</var> (UTF-8 by default) and a stylesheet, security policy and refreshing
-          interval can be set by <var>http-equiv</var>.</td>
+        <td>Information about the page data. Depending on <var>name</var>, it can define the
+          application name ("application-name"), authorship ("author"), description
+          ("description"), generating software package ("generator"), keywords ("keywords"),
+          and viewport settings ("viewport"). The values for these are specified in
+          <var>content</var>. A character set can also be set by <var>charset</var>
+          ("UTF-8" by default) and a stylesheet, security policy and refreshing interval can
+          be set by <var>http-equiv</var>.</td>
         <td><var>charset</var><br>
           <var>content</var><br>
           <var>http-equiv</var><br>
@@ -712,10 +734,10 @@
       <tr class="t1inline t1form">
         <td>Meter</td>
         <td><span class="tag">meter</span></td>
-        <td>Creates a measurement gauge for a value <var>value</var> between <var>min</var> and <var>max</var>.
-          It is by default displayed in red if the value lies below <var>low</var>, yellow until
-          <var>high</var>, and green otherwise. Its optimal value is <var>optimum</var>. It is linked to a
-          form via <var>form</var>.</td>
+        <td>Creates a measurement gauge for a value <var>value</var> between <var>min</var> and
+          <var>max</var>.It is by default displayed in red if the value lies below <var>low</var>,
+          yellow until <var>high</var>, and green otherwise. Its optimal value is
+          <var>optimum</var>. It is linked to a form via <var>form</var>.</td>
         <td><var>form</var><br>
           <var>high</var><br>
           <var>low</var><br>
@@ -740,10 +762,11 @@
       <tr class="t1inline t1media">
         <td>Object</td>
         <td><span class="tag">object</span></td>
-        <td>A container for an external resource of type <var>type</var> found at <var>data</var>, named
-          <var>name</var>, of dimensions <var>width</var> by <var>height</var>. It may belong to a form
-          <var>form</var>, use an image map <var>usemap</var>, and it must be the correct type in order
-          to display given <var>typemustmatch</var>. It was originally intended to embed plug-ins.</td>
+        <td>A container for an external resource of type <var>type</var> found at <var>data</var>,
+          named <var>name</var>, of dimensions <var>width</var> by <var>height</var>. It may
+          belong to a form <var>form</var>, use an image map <var>usemap</var>, and it must be
+          the correct type in order to display given <var>typemustmatch</var>. It was originally
+          intended to embed plug-ins.</td>
         <td><var>data</var><br>
           <var>form</var><br>
           <var>height</var><br>
@@ -757,24 +780,26 @@
       <tr class="t1block t1list">
         <td>Ordered List</td>
         <td><span class="tag">ol</span></td>
-        <td>Defines an ordered list, grouping <span class="tag">li</span> elements. Its numbering is defined by
-          <var>type</var> (decimal by default), starts at <var>start</var> (1 by default) and counts up
-          or, given <var>reversed</var>, down.</td>
+        <td>Defines an ordered list, grouping <span class="tag">li</span> elements. Its numbering
+          is defined by <var>type</var> (decimal by default), starts at <var>start</var>
+          (1 by default) and counts up or, given <var>reversed</var>, down.</td>
         <td><var>reversed</var><br><var>start</var><br><var>type</var><br>Globals</td>
       </tr>
       <tr class="t1form">
         <td>Option Group</td>
         <td><span class="tag">optgroup</span></td>
-        <td>Groups multiple options together in a <span class="tag">select</span> drop-down list under a label
-          <var>label</var>. The whole group is disabled given <var>disabled</var>.</td>
+        <td>Groups multiple options together in a <span class="tag">select</span> drop-down list
+          under a label <var>label</var>. The whole group is disabled given <var>disabled</var>.
+        </td>
         <td><var>disabled</var><br><var>label</var><br>Globals</td>
       </tr>
       <tr class="t1form">
         <td>Option</td>
         <td><span class="tag">option</span></td>
-        <td>A single option to select in <span class="tag">select</span> or <span class="tag">datalist</span>. It shows its argument
-          or <var>label</var> for simplicity, and will send <var>value</var> when the form is submitted.
-          It is preselected given <var>selected</var> and unavaliable given <var>disabled</var>.</td>
+        <td>A single option to select in <span class="tag">select</span> or
+          <span class="tag">datalist</span>. It shows its argument or <var>label</var> for
+          simplicity, and will send <var>value</var> when the form is submitted. It is
+          preselected given <var>selected</var> and unavaliable given <var>disabled</var>.</td>
         <td><var>disabled</var><br>
           <var>label</var><br>
           <var>selected</var><br>
@@ -784,9 +809,9 @@
       <tr class="t1inline t1form">
         <td>Output</td>
         <td><span class="tag">output</span></td>
-        <td>Displays a result updated real-time via a script. Its inputs are listed in <var>for</var>
-          and its value is modified externally, referring to it by its <var>name</var>. It is linked
-          to a form through <var>form</var>.</td>
+        <td>Displays a result updated real-time via a script. Its inputs are listed in
+          <var>for</var> and its value is modified externally, referring to it by its
+          <var>name</var>. It is linked to a form through <var>form</var>.</td>
         <td><var>for</var><br><var>form</var><br><var>name</var><br>Globals</td>
       </tr>
       <tr class="t1block">
@@ -798,16 +823,17 @@
       <tr class="t1none t1media">
         <td>Parameter</td>
         <td><span class="tag">param</span></td>
-        <td>Specifies an attribute <var>name</var> for the parent <span class="tag">object</span> to have the value
-          <var>value</var>.</td>
+        <td>Specifies an attribute <var>name</var> for the parent <span class="tag">object</span>
+          to have the value <var>value</var>.</td>
         <td><var>name</var><br><var>value</var><br>Globals</td>
       </tr>
       <tr class="t1inline t1media">
         <td>Picture</td>
         <td><span class="tag">picture</span></td>
-        <td>A container for a responsive and flexible image. It contains one or more <span class="tag">source</span>
-          tags, of which the first one that matches proper conditions and browser support will
-          display, and an <span class="tag">img</span> at the end as a fallback.</td>
+        <td>A container for a responsive and flexible image. It contains one or more
+          <span class="tag">source</span> tags, of which the first one that matches proper
+          conditions and browser support will display, and an <span class="tag">img</span> at
+          the end as a fallback.</td>
         <td>Globals</td>
       </tr>
       <tr class="t1block t1format">
@@ -827,7 +853,8 @@
       <tr class="t1inline t1format">
         <td>Quotation</td>
         <td><span class="tag">q</span></td>
-        <td>A short quotation from a cite <var>cite</var>. It is between quotation marks by default.</td>
+        <td>A short quotation from a cite <var>cite</var>. It is between quotation marks by
+          default.</td>
         <td><var>cite</var><br>Globals</td>
       </tr>
       <tr class="t1inline t1format">
@@ -840,14 +867,15 @@
       <tr class="t1inline t1format">
         <td>Ruby Text</td>
         <td><span class="tag">rt</span></td>
-        <td>Attaches a pronounciation guide on top of East Asian characters in a <span class="tag">ruby</span>
-          annotation.</td>
+        <td>Attaches a pronounciation guide on top of East Asian characters in a
+          <span class="tag">ruby</span> annotation.</td>
         <td>Globals</td>
       </tr>
       <tr class="t1inline t1format">
         <td>Ruby Annotation</td>
         <td><span class="tag">ruby</span></td>
-        <td>Defines a set of text to be attached an explanation in a <span class="tag">rt</span>.</td>
+        <td>Defines a set of text to be attached an explanation in a <span class="tag">rt</span>.
+        </td>
         <td>Globals</td>
       </tr>
       <tr class="t1inline t1format">
@@ -866,14 +894,14 @@
         <td>Script</td>
         <td><span class="tag">script</span></td>
         <td>A JavaScript executable (<var>type</var>="text/javascript") for dynamic page function
-          written directly on the HTML or fetched from <var>src</var>. The file will not execute in
-          a browser supporting ES2015 given <var>nomodule</var>.<br>
-          For external scripts, <var>async</var> and <var>defer</var> will load the script in parallel to
-          parsing of the document. Given the former, it will run as soon as it's avaliable; given
-          the latter, it will wait until the page is parsed. Additionally, the source handles HTTP
-          CORS requests as specified by <var>crossorigin</var> and sends <var>referrerpolicy</var> to the
-          destination page. It also checks if the file has been manipulated by comparing an
-          <var>integrity</var> SRI.</td>
+          written directly on the HTML or fetched from <var>src</var>. The file will not execute
+          in a browser supporting ES2015 given <var>nomodule</var>.<br>
+          For external scripts, <var>async</var> and <var>defer</var> will load the script in
+          parallel to parsing of the document. Given the former, it will run as soon as it's
+          avaliable; given the latter, it will wait until the page is parsed. Additionally, the
+          source handles HTTP CORS requests as specified by <var>crossorigin</var> and sends
+          <var>referrerpolicy</var> to the destination page. It also checks if the file has been
+          manipulated by comparing an <var>integrity</var> SRI.</td>
         <td><var>async</var><br>
           <var>crossorigin</var><br>
           <var>defer</var><br>
@@ -899,11 +927,12 @@
       <tr class="t1inline t1form">
         <td>Selection</td>
         <td><span class="tag">select</span></td>
-        <td>Creates a drop-down list in a form <var>form</var>. It will show as options its children
-          <span class="tag">option</span> in a list of <var>size</var> visible entries, of which one (or more given
-          <var>multiple</var>) may be selected and sent with name <var>name</var>. Additionally, as with
-          <span class="tag">input</span>, it starts as selected given <var>autofocus</var>, is disabled given
-          <var>disabled</var>, and cannot be sent blank given <var>required</var>.</td>
+        <td>Creates a drop-down list in a form <var>form</var>. It will show as options its
+          children <span class="tag">option</span> in a list of <var>size</var> visible entries,
+          of which one (or more given <var>multiple</var>) may be selected and sent with name
+          <var>name</var>. Additionally, as with <span class="tag">input</span>, it starts as
+          selected given <var>autofocus</var>, is disabled given <var>disabled</var>, and cannot
+          be sent blank given <var>required</var>.</td>
         <td><var>autofocus</var><br>
           <var>disabled</var><br>
           <var>form</var><br>
@@ -923,9 +952,10 @@
         <td>Source</td>
         <td><span class="tag">source</span></td>
         <td>Specifies a possible media file <var>src</var> of MIME-type <var>type</var> for an
-          <span class="tag">audio</span> or <span class="tag">video</span>, or an image <var>srcset</var> for a <span class="tag">picture</span>,
-          to be used met the conditions specified in <var>media</var>. If it is unusable, it
-          falls back to the next <span class="tag">source</span>.</td>
+          <span class="tag">audio</span> or <span class="tag">video</span>, or an image
+          <var>srcset</var> for a <span class="tag">picture</span>, to be used met the conditions
+          specified in <var>media</var>. If it is unusable, it falls back to the next
+          <span class="tag">source</span>.</td>
         <td><var>media</var><br>
           <var>src</var><br>
           <var>srcset</var><br>
@@ -947,8 +977,9 @@
       <tr class="t1none">
         <td>Style</td>
         <td><span class="tag">style</span></td>
-        <td>Defines a CSS stylesheet (<var>type</var>="text/CSS") for element formatting within the
-          page. It may change depending on device or media query given by <var>media</var>.</td>
+        <td>Defines a CSS stylesheet (<var>type</var>="text/CSS") for element formatting within
+          the page. It may change depending on device or media query given by <var>media</var>.
+        </td>
         <td><var>media</var><br><var>type</var><br>Globals</td>
       </tr>
       <tr class="t1inline t1format">
@@ -960,8 +991,8 @@
       <tr class="t1block t1page">
         <td>Summary</td>
         <td><span class="tag">summary</span></td>
-        <td>Defines a visible heading for a <span class="tag">details</span> element. It should be placed directly
-          below the tag.</td>
+        <td>Defines a visible heading for a <span class="tag">details</span> element. It should
+          be placed directly below the tag.</td>
         <td>Globals</td>
       </tr>
       <tr class="t1inline t1format">
@@ -979,23 +1010,27 @@
       <tr class="t1block t1table">
         <td>Table</td>
         <td><span class="tag">table</span></td>
-        <td>A table element, containing <span class="tag">caption</span>, <span class="tag">colgroup</span>, <span class="tag">thead</span>,
-          <span class="tag">tbody</span>, <span class="tag">tr</span>, <span class="tag">th</span>, <span class="tag">td</span> and <span class="tag">tfoot</span> tags.</td>
+        <td>A table element, containing <span class="tag">caption</span>,
+          <span class="tag">colgroup</span>, <span class="tag">thead</span>,
+          <span class="tag">tbody</span>, <span class="tag">tr</span>,
+          <span class="tag">th</span>, <span class="tag">td</span> and
+          <span class="tag">tfoot</span> tags.</td>
         <td>Globals</td>
       </tr>
       <tr class="t1table">
         <td>Table Body</td>
         <td><span class="tag">tbody</span></td>
-        <td>Groups regular table rows together in a table element. It is between <span class="tag">thead</span>
-          and <span class="tag">tfoot</span>.<br>It is created automatically when not specified directly.</td>
+        <td>Groups regular table rows together in a table element. It is between
+          <span class="tag">thead</span> and <span class="tag">tfoot</span>.<br>It is created
+          automatically when not specified directly.</td>
         <td>Globals</td>
       </tr>
       <tr class="t1table">
         <td>Table Data</td>
         <td><span class="tag">td</span></td>
-        <td>Defines a regular data cell in a table row. It is related to the cell(s) <var>headers</var>
-          and it can span more than one column or row with <var>colspan</var> and <var>rowspan</var>
-          respectively.</td>
+        <td>Defines a regular data cell in a table row. It is related to the cell(s)
+          <var>headers</var> and it can span more than one column or row with <var>colspan</var>
+          and <var>rowspan</var> respectively.</td>
         <td><var>colspan</var><br><var>headers</var><br><var>rowspan</var><br>Globals</td>
       </tr>
       <tr class="t1none t1format">
@@ -1008,14 +1043,15 @@
       <tr class="t1inline t1form">
         <td>Text Area</td>
         <td><span class="tag">textarea</span></td>
-        <td>A large, scalable textbox of dimensions <var>rows</var> by <var>cols</var> (in characters)
-          to submit a multi-line text input in a form <var>form</var>. The text will wrap given "hard"
-          in <var>wrap</var>. And, as in <span class="tag">input</span>, it will be selected given <var>autofocus</var>, be
-          disabled given <var>disabled</var>, have a grayed-out prompt <var>placeholder</var> when empty,
-          be unmodifiable but still sent given <var>readonly</var>, not be accepted blank given
-          <var>required</var>, and be sent with name <var>name</var>. Additionally, the input text may be
-          limited to at most <var>maxlength</var> characters, and there may be a default text given by
-          the tag's argument.</td>
+        <td>A large, scalable textbox of dimensions <var>rows</var> by <var>cols</var> (in
+          characters) to submit a multi-line text input in a form <var>form</var>. The text will
+          wrap given "hard" in <var>wrap</var>. And, as in <span class="tag">input</span>, it
+          will be selected given <var>autofocus</var>, be disabled given <var>disabled</var>,
+          have a grayed-out prompt <var>placeholder</var> when empty, be unmodifiable but still
+          sent given <var>readonly</var>, not be accepted blank given <var>required</var>, and
+          be sent with name <var>name</var>. Additionally, the input text may be limited to at
+          most <var>maxlength</var> characters, and there may be a default text given by the
+          tag's argument.</td>
         <td><var>autofocus</var><br>
           <var>cols</var><br>
           <var>dirname</var><br>
@@ -1040,10 +1076,11 @@
       <tr class="t1table">
         <td>Table Header</td>
         <td><span class="tag">th</span></td>
-        <td>Defines a single header cell in a table row. As with <span class="tag">td</span>, It is related to the
-          cell(s) <var>headers</var> and it can span more than one column or row with <var>colspan</var>
-          and <var>rowspan</var> respectively. Its content is abbreviated in <var>abbr</var>. Also, the
-          header can title a col, colgroup, row or rowgroup depending on <var>scope</var>.</td>
+        <td>Defines a single header cell in a table row. As with <span class="tag">td</span>, It
+          is related to the cell(s) <var>headers</var> and it can span more than one column or
+          row with <var>colspan</var> and <var>rowspan</var> respectively. Its content is
+          abbreviated in <var>abbr</var>. Also, the header can title a col, colgroup, row or
+          rowgroup depending on <var>scope</var>.</td>
         <td><var>abbr</var><br>
           <var>colspan</var><br>
           <var>headers</var><br>
@@ -1054,14 +1091,16 @@
       <tr class="t1table">
         <td>Table Head</td>
         <td><span class="tag">thead</span></td>
-        <td>Groups header table rows together in a table element. It is before <span class="tag">caption</span> and
-          <span class="tag">colgroup</span> tags, but before <span class="tag">tbody</span> and <span class="tag">tfoot</span>.</td>
+        <td>Groups header table rows together in a table element. It is before
+          <span class="tag">caption</span> and <span class="tag">colgroup</span> tags, but
+          before <span class="tag">tbody</span> and <span class="tag">tfoot</span>.</td>
         <td>Globals</td>
       </tr>
       <tr class="t1inline t1format">
         <td>Time</td>
         <td><span class="tag">time</span></td>
-        <td>Takes some text to be specified a machine-readable date and time <var>datetime</var>.</td>
+        <td>Takes some text to be specified a machine-readable date and time
+          <var>datetime</var>.</td>
         <td><var>datetime</var><br>Globals</td>
       </tr>
       <tr class="t1none">
@@ -1074,17 +1113,19 @@
       <tr class="t1table">
         <td>Table Row</td>
         <td><span class="tag">tr</span></td>
-        <td>A single row in a table, which may contain <span class="tag">th</span> and <span class="tag">td</span> elements.</td>
+        <td>A single row in a table, which may contain <span class="tag">th</span> and
+          <span class="tag">td</span> elements.</td>
         <td>Globals</td>
       </tr>
       <tr class="t1media">
         <td>Text Track</td>
         <td><span class="tag">track</span></td>
-        <td>Defines an accompanying text resource, such as subtitles or captions, to play alongside
-          the parent <span class="tag">audio</span> or <span class="tag">video</span>. It consists of a .vtt file from <var>src</var> in
-          language <var>srclang</var>, of type <var>kind</var> (captions, chapters, descriptions, metadata
-          or subtitles) and titled <var>label</var>. Given <var>default</var>, it is the preselected one
-          from a list of multiple.</td>
+        <td>Defines an accompanying text resource, such as subtitles or captions, to play
+          alongside the parent <span class="tag">audio</span> or <span class="tag">video</span>.
+          It consists of a .vtt file from <var>src</var> in language <var>srclang</var>, of type
+          <var>kind</var> ("captions", "chapters", "descriptions", "metadata" or "subtitles") and
+          titled <var>label</var>. Given <var>default</var>, it is the preselected one from a
+          list of multiple.</td>
         <td><var>default</var><br>
           <var>kind</var><br>
           <var>label</var><br>
@@ -1107,12 +1148,12 @@
       <tr class="t1inline t1media">
         <td>Video</td>
         <td><span class="tag">video</span></td>
-        <td>An embedded video player of dimensions <var>width</var> by <var>height</var> that will play
-          <var>src</var> or display an image <var>poster</var> while it waits. It will start as soon as
-          it loads given <var>autoplay</var> and as specified by <var>preload</var>, start again after
-          it ends given <var>loop</var> or not play sound given <var>muted</var>. It comes with added
-          buttons dependent on controls</var>.<br>Its argument replaces the video when it is not
-          avaliable.</td>
+        <td>An embedded video player of dimensions <var>width</var> by <var>height</var> that
+          will play <var>src</var> or display an image <var>poster</var> while it waits. It will
+          start as soon as it loads given <var>autoplay</var> and as specified by
+          <var>preload</var>, start again after it ends given <var>loop</var> or not play sound
+          given <var>muted</var>. It comes with added buttons dependent on controls</var>.<br>Its
+          argument replaces the video when it is not avaliable.</td>
         <td><var>autoplay</var><br>
           <var>controls</var><br>
           <var>height</var><br>
@@ -1131,48 +1172,8 @@
         </td>
         <td>Globals</td>
       </tr>
-    </tbody>
+      </tbody>
     </table>
-    <script>
-      const sel = document.getElementsByClassName("sel");
-      const all = document.getElementById("htmltagsbody").children;
-      let className = "u";
-
-      function select(x) {
-        for (let i=0; i<sel.length; i++) {sel[i].classList.remove("selected")}
-        sel[x].classList.add("selected");
-        switch (x) {
-          case 0: className = "u"; break;  // Universal class. Hard-coded.
-          case 1: className = "t1block"; break;
-          case 2: className = "t1inline"; break;
-          case 3: className = "t1none"; break;
-          case 4: className = "t1table"; break;
-          case 5: className = "t1list"; break;
-          case 6: className = "t1format"; break;
-          case 7: className = "t1form"; break;
-          case 8: className = "t1media"; break;
-          case 9: className = "t1page"; break;
-        }
-        let parity = false
-        for (let i=0; i<all.length; i++) {
-          all[i].classList.remove("teven");
-          all[i].classList.remove("todd");
-          if (all[i].classList.contains(className) || className == "u") {
-            all[i].classList.remove("tnope");
-            if (parity) {
-              all[i].classList.add("teven");
-            } else {
-              all[i].classList.add("todd");
-            }
-            parity = !parity
-          } else {
-            all[i].classList.add("tnope");
-          }
-        }
-      }
-
-      select(0);
-    </script>
     <div style="display:flex;overflow:auto;">
     <div style="margin:0px 80px 0px 40px;width:500px;">
       <h3 id="Ch1-1" style="text-align:center;">Page model example</h3>
@@ -1231,5 +1232,120 @@
     </div>
     </div>
     <h2 id="Ch2">CSS properties</h2>
+    <div class="buttonlist">
+      Elements to show:
+      <div>
+        <button class="sel2" onclick="select(0,2)">All</button>
+        <button class="sel2" onclick="select(1,2)">Flexbox</button>
+        <button class="sel2" onclick="select(2,2)">Grid</button>
+        <button class="sel2" onclick="select(3,2)">Text</button>
+        <button class="sel2" onclick="select(4,2)">Animation</button>
+        <button class="sel2" onclick="select(5,2)">Box Model</button>
+        <button class="sel2" onclick="select(6,2)">Image & SVG</button>
+        <button class="sel2" onclick="select(7,2)">Scroll Behaviour</button>
+      </div>
+    </div>
+    <table id="cssprop">
+      <thead>
+      <tr class="theader">
+        <th>Property</th>
+        <th>Description</th>
+        <th>Values</th>
+        <th>Other</th>
+      </tr>
+      </thead>
+      <tbody id="csspropbody">
+      <tr>
+        <td><span class="css">accent-color</span></td>
+        <td>The color of UI elements in an <span class="tag">input</span>.</td>
+        <td>"auto" &ndash; lets the browser specify the color. It is default.<br>
+          <var>color</var> &ndash; any user-defined color.</td>
+        <td>Inheritable</td>
+      </tr>
+      <tr class="t2flex t2grid">
+        <td><span class="css">align-content</span></td>
+        <td>Specifies how to distribute flex <strong>lines</strong> along the cross axis in a
+          flexbox.<br>It can also be used in a grid, in the block direction.</td>
+        <td>"stretch" &ndash; stretches the lines to cover all avaliable space. It is default.<br>
+          "center" &ndash; aligns the lines towards the center of the container.<br>
+          "flex-start" &ndash; aligns the lines towards the start of the container.<br>
+          "flex-end" &ndash; aligns the lines towards the end of the container.<br>
+          "space-between" &ndash; maximizes space between lines, excluding the container edges.
+          <br> "space-around" &ndash; produces half the space at the container edges than through
+          the interior of the container.<br>
+          "space-evenly" &ndash; maximizes space between lines, including the container edges.<br>
+        </td>
+        <td></td>
+      </tr>
+      <tr class="t2flex t2grid">
+        <td><span class="css">align-items</span></td>
+        <td>Specifies how to distribute flex <strong>items</strong> along the cross axis in a
+          flexbox.<br>It can also be used in a grid, in the block direction.</td>
+        <td>"normal" &ndash; is "stretch", becoming "start" if the grid items have a defined size.
+          It is default.<br>
+          "stretch" &ndash; stretches the items to cover all avaliable space.<br>
+          "center" &ndash; aligns the items towards the center of the container.<br>
+          "flex-start" &ndash; aligns the items towards the start of the container (flex).<br>
+          "flex-end" &ndash; aligns the items towards the end of the container (flex).<br>
+          "start" &ndash; aligns the items towards the start of their cell (grid).<br>
+          "end" &ndash; aligns the items towards the end of their cell (grid).<br>
+          "baseline" &ndash; positions the items at the container baseline.<br></td>
+        <td></td>
+      </tr>
+      <tr class="t2flex t2grid">
+        <td><span class="css">align-self</span></td>
+        <td>Overrides the <span class="css">align-items</span> property of an individual flex
+          or grid element.</td>
+        <td>"auto" &ndash; inherits the parent container's alignment. It is default.<br>
+          "stretch", "center", "flex-start", "flex-end", "baseline" &ndash; define an alignment
+          only for the element.</td>
+        <td></td>
+      </tr>
+      </tbody>
+    </table>
+    <script>
+      const buttons = [
+        document.getElementsByClassName("sel1"),
+        document.getElementsByClassName("sel2")
+      ]
+      const tr = [
+        document.getElementById("htmltagsbody").children,
+        document.getElementById("csspropbody").children
+      ]
+      const classNameSelector = [
+        ["u","t1block","t1inline","t1none","t1table","t1list","t1format",
+          "t1form","t1media","t1page"],
+        ["u","t2flex","t2grid","t2text","t2anim","t2box","t2image","t2scroll"]
+      ]
+      
+      function select(x, table) {
+        let currentButtons = buttons[table-1]
+        let currentRows = tr[table-1]
+        for (let i=0; i<currentButtons.length; i++) {
+          currentButtons[i].classList.remove("selected")
+        }
+        currentButtons[x].classList.add("selected");
+        let className = classNameSelector[table-1][x]
+        let parity = false
+        for (let i=0; i<currentRows.length; i++) {
+          currentRows[i].classList.remove("teven");
+          currentRows[i].classList.remove("todd");
+          if (currentRows[i].classList.contains(className) || className == "u") {
+            currentRows[i].classList.remove("tnope");
+            if (parity) {
+              currentRows[i].classList.add("teven");
+            } else {
+              currentRows[i].classList.add("todd");
+            }
+            parity = !parity
+          } else {
+            currentRows[i].classList.add("tnope");
+          }
+        }
+      }
+
+      select(0, 1);
+      select(0, 2);
+    </script>
   </body>
 </html>
