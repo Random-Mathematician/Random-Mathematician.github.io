@@ -41,7 +41,7 @@ What I'm currently working on:
 
 ## Changelog
 
-What it's already been done:
+What has already been done:
 - (Before 07-27) Writing the HTML tag reference and making the table filters functional.
 - (Before 07-27) Styling the pages and drawing the page logo.
 - (07-27) Joining GitHub. Yay!

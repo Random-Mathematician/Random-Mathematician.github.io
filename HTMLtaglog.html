@@ -13,10 +13,13 @@
         border:none;cursor:pointer;color:#BEBECA;}
       .buttonlist button:hover {background-color:#1f204f;}
       .buttonlist button:active {border:1px groove #9999A5;}
-      .buttonlist .selected {background-color:#2f204f;color:#EDEEFF;border:1px solid #EDEEFF;}
+      .buttonlist .selected {background-color:#2f204f;color:#EDEEFF;
+        border:1px solid #EDEEFF;}
       .example-layout {background-color:#8F8FB5;color:black;text-align:center;
         border-radius:8px;box-sizing:border-box;}
       .example-layout.tmsingleton {width:100px;height:20px;float:left;margin:0px 5px 5px 0px;}
+      ul.css-shorthand {list-style:none;margin:0;padding-left:10px}
+      ul.css-shorthand li {padding-top:1px;}
     </style>
   </head>
   <body>
@@ -1242,7 +1245,7 @@
         <button class="sel2" onclick="select(4,2)">Animation</button>
         <button class="sel2" onclick="select(5,2)">Box Model</button>
         <button class="sel2" onclick="select(6,2)">Image & SVG</button>
-        <button class="sel2" onclick="select(7,2)">Scroll Behaviour</button>
+        <button class="sel2" onclick="select(7,2)">UI Behaviour</button>
       </div>
     </div>
     <table id="cssprop">
@@ -1255,7 +1258,7 @@
       </tr>
       </thead>
       <tbody id="csspropbody">
-      <tr>
+      <tr class="t2ui">
         <td><span class="css">accent-color</span></td>
         <td>The color of UI elements in an <span class="tag">input</span>.</td>
         <td>"auto" &ndash; lets the browser specify the color. It is default.<br>
@@ -1301,6 +1304,114 @@
           only for the element.</td>
         <td></td>
       </tr>
+      <tr>
+        <td><span class="css">all</span></td>
+        <td>Reverts all other properties of an element (except <span class="css">direction</span>
+          and <span class="css">unicode-bidi</span>).</td>
+        <td>"unset" &ndash; changes all properties to its parent's if they are inheritable or
+          to their initial value if they are not.</td>
+        <td></td>
+      </tr>
+      <tr class="t2anim">
+        <td><span class="css">animation</span></td>
+        <td>Defines an animation playstyle and timing.</td>
+        <td>Shorthand for:<br>
+          <ul class="css-shorthand">
+            <li><span class="css">animation-name</span></li>
+            <li><span class="css">animation-duration</span></li>
+            <li><span class="css">animation-timing-function</span></li>
+            <li><span class="css">animation-delay</span></li>
+            <li><span class="css">animation-iteration-count</span></li>
+            <li><span class="css">animation-direction</span></li>
+            <li><span class="css">animation-fill-mode</span></li>
+            <li><span class="css">animation-play-state</span></li>
+          </ul></td>
+        <td></td>
+        <tr class="t2anim">
+          <td><span class="css">animation-delay</span></td>
+          <td>Defines a delay to wait before starting the animation.</td>
+          <td><var>time</var> &ndash; the delay, in seconds or miliseconds. "0s" is default.</td>
+          <td></td>
+        </tr>
+        <tr class="t2anim">
+          <td><span class="css">animation-direction</span></td>
+          <td>Specifies in which direction the animation should play.</td>
+          <td>"normal" &ndash; it plays forwards. It is default.<br>
+            "reverse" &ndash; it plays backwards.<br>
+            "alternate" &ndash; it plays forwards first, then backwards.<br>
+            "alternate-reverse" &ndash; it plays backwards first, then forwards.</td>
+          <td></td>
+        </tr>
+        <tr class="t2anim">
+          <td><span class="css">animation-duration</span></td>
+          <td>Defines the length of an animation cycle.</td>
+          <td><var>time</var> &ndash; the length, in seconds or miliseconds. "0s" is default.
+          </td>
+          <td></td>
+        </tr>
+        <tr class="t2anim">
+          <td><span class="css">animation-fill-mode</span></td>
+          <td>Selects a style for the element while the animation is not playing.</td>
+          <td>"none" &ndash; leaves its predetermined style. It is default.<br>
+            "forwards" &ndash; makes it retain the last keyframe appareance.<br>
+            "backwards" &ndash; makes it retain the first keyframe appareance.<br>
+            "both" &ndash; combines "forwards" and "backwards" according to the animation state.
+          </td>
+          <td></td>
+        </tr>
+        <tr class="t2anim">
+          <td><span class="css">animation-iteration-count</span></td>
+          <td>Defines the number of animation cycles to play.</td>
+          <td><var>number</var> &ndash; the number of cycles. "1" is default.<br>
+            "infinite" &ndash; makes it play indefinitely.</td>
+          <td></td>
+        </tr>
+        <tr class="t2anim">
+          <td><span class="css">animation-name</span></td>
+          <td>Specifies which animation to play.</td>
+          <td>"none" &ndash; does not play an animation. It is default.<br>
+            <var>keyframe</var> &ndash; the name of the animation defined in a
+            <span class="css">@keyframe</span> rule.</td>
+          <td></td>
+        </tr>
+        <tr class="t2anim">
+          <td><span class="css">animation-play-state</span></td>
+          <td>Used to pause an animation via JavaScript.</td>
+          <td>"running" &ndash; the animation is not paused and currently updating. It is
+            default.<br>"paused" &ndash; the animation has been stopped and does not execute.
+          </td>
+          <td></td>
+        </tr>
+        <tr class="t2anim">
+          <td><span class="css">animation-timing-function</span></td>
+          <td>Defines a continuous Bézier speed curve or discrete time steps to transition from
+            an animation frame to another.</td>
+          <td>"ease" &ndash; equal to <var>cubic-bezier(0.25, 0.1, 0.25, 1)</var>. It is default.
+            <br>"linear" &ndash; equal to <var>cubic-bezier(0, 0, 1, 1)</var>.<br>
+            "ease-in" &ndash; equal to <var>cubic-bezier(0.42, 0, 1, 1)</var>.<br>
+            "ease-out" &ndash; equal to <var>cubic-bezier(0, 0, 0.58, 1)</var>.<br>
+            "ease-in-out" &ndash; equal to <var>cubic-bezier(0.48, 0, 0.58, 1)</var>.<br>
+            <var>cubic-bezier(x1, y1, x2, y2)</var> &ndash; defines a cubic Bézier curve with
+            the points (0,0), (x1,y1), (x2,y2) and (1,1). Arguments <var>x1</var> and
+            <var>x2</var> must lie between 0 and 1.<br>
+            "step-start" &ndash; equal to <var>steps(1, start)</var>.<br>
+            "step-end" &ndash; equal to <var>steps(1, end)</var>.<br>
+            <var>steps(n, pos)</var> &ndash; splits the transition into <var>n</var> equal
+            discrete steps. One step changes into the next at the end of that same step if
+            <var>pos</var> = (jump-)end, at the start of it if <var>pos</var> = (jump-)start,
+            in the middle if <var>pos</var> = jump-none and at both if <var>pos</var> =
+            jump-both.</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><span class="css">aspect-ratio</span></td>
+          <td>The <span class="css">width</span>-to-<span class="css">height</span> ratio of
+            an element.</td>
+          <td><var>w</var> "/" <var>h</var> &ndash; The ratio, as a fraction <var>w</var> over
+            <var>h</var>, the <span class="css">width</span> and <span class="css">height</span>
+            respectively.</td>
+          <td>Animatable</td>
+        </tr>
       </tbody>
     </table>
     <script>
@@ -1315,7 +1426,7 @@
       const classNameSelector = [
         ["u","t1block","t1inline","t1none","t1table","t1list","t1format",
           "t1form","t1media","t1page"],
-        ["u","t2flex","t2grid","t2text","t2anim","t2box","t2image","t2scroll"]
+        ["u","t2flex","t2grid","t2text","t2anim","t2box","t2image","t2ui"]
       ]
       
       function select(x, table) {
