@@ -1,6 +1,9 @@
 @font-face {font-family:"DejaVu Serif";src:url(fonts/DejaVuSerif.ttf)}
 @font-face {font-family:"DejaVu Serif";src:url(fonts/DejaVuSerif-Bold.ttf);font-weight:bold;}
-body {background-color:#0F0F1F;color:#EDEEFF;font-family:sans-serif;}
+body {background-color:#0F0F1F;color:#EDEEFF;font-family:sans-serif;margin:0px;}
+main {margin:8px; padding-top:30px;}
+nav {position:fixed;top:0;left:0;background-color:#00000F;width:100%;height:50px;}
+nav img {padding:5px;}
 h1, h2, h3 {color:#EDEEFF;font-family:"DejaVu Serif", serif;}
 h1 {text-align:center;padding:10px;background-color:#292A4B;}
 h2, h3 {clear:left;margin-left:10px;margin-bottom:10px;}
@@ -12,7 +15,7 @@ th, td {padding-left:7px;padding-right:7px;padding-top:2px;padding-bottom:2px;}
 .theader {font-size:18px;background-color: #292A4B;}
 .teven {background-color:#00001F;}
 .todd {background-color:#0F0F2F;}
-.tnope {display:none;}
+.hidden {display:none;}
 .tunfinished {background-color:#202020;color:#9999A5;}
 a:link {color:#EDEEFF;}
 a:visited {color:#BEBECA;}

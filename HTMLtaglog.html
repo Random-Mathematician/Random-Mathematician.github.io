@@ -23,6 +23,7 @@
     </style>
   </head>
   <body>
+  <main>
     <h1>HTML and CSS tag reference</h1>
     <div class="conttable">
       <h3 style="color:#EDEEFF;margin-left:5px;margin-right:5px">
@@ -1442,7 +1443,7 @@
           currentRows[i].classList.remove("teven");
           currentRows[i].classList.remove("todd");
           if (currentRows[i].classList.contains(className) || className == "u") {
-            currentRows[i].classList.remove("tnope");
+            currentRows[i].classList.remove("hidden");
             if (parity) {
               currentRows[i].classList.add("teven");
             } else {
@@ -1450,7 +1451,7 @@
             }
             parity = !parity
           } else {
-            currentRows[i].classList.add("tnope");
+            currentRows[i].classList.add("hidden");
           }
         }
       }
@@ -1458,5 +1459,6 @@
       select(0, 1);
       select(0, 2);
     </script>
+  </main>
   </body>
 </html>
