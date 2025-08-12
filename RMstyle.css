@@ -1,31 +1,132 @@
-@font-face {font-family:"DejaVu Serif";src:url(fonts/DejaVuSerif.ttf)}
-@font-face {font-family:"DejaVu Serif";src:url(fonts/DejaVuSerif-Bold.ttf);font-weight:bold;}
-body {background-color:#0F0F1F;color:#EDEEFF;font-family:sans-serif;margin:0px;}
-main {margin:8px; padding-top:30px;}
-nav {position:fixed;top:0;left:0;background-color:#00000F;width:100%;height:50px;}
-nav img {padding:5px;}
-h1, h2, h3 {color:#EDEEFF;font-family:"DejaVu Serif", serif;}
-h1 {text-align:center;padding:10px;background-color:#292A4B;}
-h2, h3 {clear:left;margin-left:10px;margin-bottom:10px;}
-table {color:#EDEEFF;padding:5px;margin:20px;padding-top:0px;margin-top:0px;}
-.conttable {background-color:#292A4B;border:1px solid #EDEEFF;float:left;
-    padding:5px;margin:20px;padding-top:0px;margin-top:0px;}
-table, tr, th, td {border:1px solid #EDEEFF;border-collapse:collapse;}
-th, td {padding-left:7px;padding-right:7px;padding-top:2px;padding-bottom:2px;}
-.theader {font-size:18px;background-color: #292A4B;}
-.teven {background-color:#00001F;}
-.todd {background-color:#0F0F2F;}
+/* Fonts */
+@font-face {
+    font-family: "DejaVu Serif";
+    src: url(fonts/DejaVuSerif.ttf)
+}
+
+@font-face {
+    font-family: "DejaVu Serif";
+    src: url(fonts/DejaVuSerif-Bold.ttf);
+    font-weight: bold;
+}
+
+/* Color palette */
+:root {
+    --stWhite: #EDEEFF;
+    --stBlue: #292A4B;
+    --darkBlue: #00001F;
+}
+
+/* Standart */
+body {
+    background-color: #0F0F1F;
+    color: var(--stWhite);
+    font-family: sans-serif;
+    margin: 0px;
+}
+
+main {margin: 50px 8px 0px 8px;}
+
+h1, h2, h3, h4 {
+    color: var(--stWhite);
+    font-family: "DejaVu Serif", serif;
+}
+
+h1 {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--stBlue);
+}
+
+h2, h3, h4 {
+    clear: left;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #00000F;
+    width: 100%;
+    height: 50px;
+}
+
+nav .nav-main {color: var(--stWhite);}
+
+nav img {
+    margin: 5px;
+    vertical-align: middle;
+}
+
+.conttable {
+    background-color: var(--stBlue);
+    border: 1px solid var(--stWhite);
+    float: left;
+    padding: 5px;
+    margin: 20px;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+.conttable h3 {margin: 15px 5px;}
+.conttable ol {margin-top: 0px;}
+
 .hidden {display:none;}
-.tunfinished {background-color:#202020;color:#9999A5;}
-a:link {color:#EDEEFF;}
-a:visited {color:#BEBECA;}
-a:hover {color:#9999A5;}
-a:active {color:#7F7FFF;}
-var {background-color:rgba(255,255,255,10%);padding:0px 2px;
-    border-radius:5px;color:#ff7f7f;}
-span.tag {background-color:rgba(255,255,255,10%);padding:0px 2px;
-    border-radius:5px;color:#7fff7f;}
+
+/* Tables */
+table {
+    color: var(--stWhite);
+    padding: 5px;
+    margin: 20px;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+table, tr, th, td {
+    border: 1px solid var(--stWhite);
+    border-collapse: collapse;
+}
+
+th, td {padding: 2px 7px;}
+
+.theader {font-size: 18px; background-color: #292A4B;}
+.teven {background-color: #00001F;}
+.todd {background-color: #0F0F2F;}
+
+.tunfinished { /* DEBUG */
+    background-color: #202020 !important;
+    color:#9999A5 !important;
+} 
+
+/* Links */
+a:link:not(.nav-main) {color: var(--stWhite);}
+a:visited:not(.nav-main) {color:#BEBECA;}
+a:hover:not(.nav-main) {color:#9999A5;}
+a:active:not(.nav-main) {color:#7F7FFF;}
+
+/* Special information */
+var {
+    background-color: rgba(255,255,255,10%);
+    padding: 0px 2px;
+    border-radius: 5px;
+    color: #ff7f7f;
+}
+
+span.tag {
+    background-color: rgba(255,255,255,10%);
+    padding: 0px 2px;
+    border-radius: 5px;
+    color: #7fff7f;
+}
+
 span.tag::before {content:"<";}
 span.tag::after {content:">";}
-span.css {background-color:rgba(255,255,255,10%);padding:0px 2px;
-    border-radius:5px;color:#ffff7f;}
+
+span.css {
+    background-color: rgba(255,255,255,10%);
+    padding: 0px 2px;
+    border-radius: 5px;
+    color:#ffff7f;
+}
