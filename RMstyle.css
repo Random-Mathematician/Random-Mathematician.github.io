@@ -15,6 +15,7 @@
     --stWhite: #EDEEFF;
     --stBlue: #292A4B;
     --darkBlue: #00001F;
+    --textBG: rgba(255,255,255,10%);
 }
 
 /* Standart */
@@ -25,7 +26,7 @@ body {
     margin: 0px;
 }
 
-main {margin: 50px 8px 0px 8px;}
+main {margin: 60px 8px 0px 8px;}
 
 h1, h2, h3, h4 {
     color: var(--stWhite);
@@ -51,23 +52,59 @@ nav {
     background-color: #00000F;
     width: 100%;
     height: 50px;
+    z-index: 1;
 }
 
-nav .nav-main {color: var(--stWhite);}
+nav .nav-main {
+    text-decoration: none;
+    color: var(--stWhite);
+    float:left;
+}
 
 nav img {
     margin: 5px;
     vertical-align: middle;
 }
 
+nav .nav-buttons {
+    display:flex;
+    float:right;
+    margin-right: 10px;
+}
+
+nav .nav-buttons button {
+    height: 50px;
+    padding: 0px 20px;
+    border: none;
+    color: inherit;
+    background-color: inherit;
+}
+
+nav .nav-buttons button:hover {
+    background-color: var(--stBlue);
+    cursor: pointer;
+}
+
+.dropdown {
+    background-color: var(--stWhite);
+    height: 100px;
+    position: absolute;
+    top: 50px;
+    min-width: 100px;
+    z-index: 2;
+}
+
+.dropdown a {
+    display: block;
+    padding: 5px;
+}
+
 .conttable {
     background-color: var(--stBlue);
     border: 1px solid var(--stWhite);
     float: left;
-    padding: 5px;
-    margin: 20px;
-    padding-top: 0px;
-    margin-top: 0px;
+    padding: 0px 5px 5px;
+    margin: 0px 20px 20px;
 }
 
 .conttable h3 {margin: 15px 5px;}
@@ -91,11 +128,11 @@ table, tr, th, td {
 
 th, td {padding: 2px 7px;}
 
-.theader {font-size: 18px; background-color: #292A4B;}
+.theader {font-size: 18px; background-color: var(--stBlue) ;}
 .teven {background-color: #00001F;}
 .todd {background-color: #0F0F2F;}
 
-.tunfinished { /* DEBUG */
+.tunfinished { /*DEBUG*/
     background-color: #202020 !important;
     color:#9999A5 !important;
 } 
@@ -108,14 +145,14 @@ a:active:not(.nav-main) {color:#7F7FFF;}
 
 /* Special information */
 var {
-    background-color: rgba(255,255,255,10%);
+    background-color: var(--textBG);
     padding: 0px 2px;
     border-radius: 5px;
     color: #ff7f7f;
 }
 
 span.tag {
-    background-color: rgba(255,255,255,10%);
+    background-color: var(--textBG);
     padding: 0px 2px;
     border-radius: 5px;
     color: #7fff7f;
@@ -125,8 +162,8 @@ span.tag::before {content:"<";}
 span.tag::after {content:">";}
 
 span.css {
-    background-color: rgba(255,255,255,10%);
+    background-color: var(--textBG);
     padding: 0px 2px;
     border-radius: 5px;
-    color:#ffff7f;
+    color: #ffff7f;
 }

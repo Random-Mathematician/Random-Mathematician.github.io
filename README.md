@@ -1,4 +1,4 @@
-# <img src="/icon.png" alt="[Logo]" style="vertical-align:middle"> Random-Mathematician's Github web page. 
+# <img src="icon.png" alt="[Logo]" style="vertical-align:middle"> Random-Mathematician's Github web page. 
 
 The purpose of this site mixes miscellaneous resources with mathematics and coding articles which would be harder to publish regularly or not be sufficiently complete for a full publication. It also stores reference pages, so that specific information could be accessed directly from the website, without needing to search for it.
 
@@ -50,6 +50,7 @@ What has already been done:
 - (07-29) Writing this README.
 - (07-31) Redoing the formatting for tags and variables.
 - (08-04) Adding the DejaVu Serif font to the project.
+- (08-13) Adding a responsive top navigation bar.
 
 ## About the fonts used
 
