@@ -17,11 +17,14 @@ Right now, the following pages are avaliable:
 Again, the site is under construction. But the pages that are *accesible to the public* are:
 - [The Main Page](index.html) - The starting page, ~~set up to start the user's tour~~ **empty**.
 - [An HTML tag reference](HTMLtaglog.html) - So that I never forget how to HTML.
+- [A template](Template.html) - to make more pages more easily.
 
 Finally, some other files are present to make the website work:
 - **The README** - You are here!
 - [The logo](icon.png) - The one you can see at the start of this README.
 - [A CSS generic stylesheet](RMstyle.css) - To give the pages their look.
+- [A fonts folder](fonts) - Containing the fonts used in the project (see below).
+- [A Navigation Bar Inserter](insertNavBar.js) - JavaScript code to insert and handle the navigation bar inside the pages.
 
 ## Known issues and bugs
 
