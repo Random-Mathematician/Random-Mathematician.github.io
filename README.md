@@ -29,7 +29,7 @@ Finally, some other files are present to make the website work:
 ## Known issues and bugs
 
 If something is wrong with the page, it should be listed below. That way, it can be fixed earlier.
-1. The top navigation bar clips into the page on devices less than 375px wide.
+1. The top navigation bar clips into the page on devices less than 285px wide.
 
 If you find any mistakes not on this list, be sure to add it to issues.
 

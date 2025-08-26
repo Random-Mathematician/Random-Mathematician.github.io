@@ -25,6 +25,7 @@ topNavBar.innerHTML = `
 </div>`;
 document.body.prepend(topNavBar);
 const navButtons = document.querySelectorAll("nav button");
+const navIcon = document.querySelector(".nav-icon");
 const openDropdowns = () => document.querySelectorAll("nav .dropdown:not(.hidden)");
 
 for (let but of navButtons) {
@@ -48,23 +49,27 @@ window.addEventListener("click", () => {
     }
 });
 
-function responsiveButtons() {
+function responsiveBar() {
     let caret = '<i class="fa fa-caret-down"></i>'
-    if (window.innerWidth > 800) {
+    let logo = `<img alt="Main Page" src="icon.png" width="40px">`
+    if (window.innerWidth > 790) {
         navButtons[0].innerHTML = "Higher Mathematics " + caret;
         navButtons[1].innerHTML = "Programming & Experiments " + caret;
         navButtons[2].innerHTML = "Miscellaneous Resources " + caret;
-    } else if (window.innerWidth > 550) {
+        navIcon.innerHTML = logo + " Main Page";
+    } else if (window.innerWidth > 540) {
         navButtons[0].innerHTML = "Mathematics " + caret;
         navButtons[1].innerHTML = "Programming " + caret;
         navButtons[2].innerHTML = "Resources " + caret;
+        navIcon.innerHTML = logo + " Main Page";
     } else {
         navButtons[0].innerHTML = "Math"
         navButtons[1].innerHTML = "Code"
         navButtons[2].innerHTML = "Other"
+        navIcon.innerHTML = logo;
     }
     // Not gonna take the time to redo this for extremally small devices
 }
 
-responsiveButtons()
-window.addEventListener("resize", responsiveButtons)
+responsiveBar()
+window.addEventListener("resize", responsiveBar)
