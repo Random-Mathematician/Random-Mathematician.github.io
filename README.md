@@ -34,9 +34,8 @@ If you find any mistakes not on this list, be sure to contact me through my GitH
 ## To-Do list
 
 What I'm currently working on:
-- Adding a top navigation bar (and perhaps a footer) to pages.
 - Setting up the main page, a user tour, and a way of organizing articles.
-- Finnishing the HTML tag log with a CSS reference and examples.
+- Finishing the HTML tag log with a CSS reference and examples.
 - Writing a "paper" on a logicomathematical framework based on nested propositional logic instead of the more common set-theoretic approach.
 
 ## Changelog
@@ -50,7 +49,7 @@ What has already been done:
 - (07-29) Writing this README.
 - (07-31) Redoing the formatting for tags and variables.
 - (08-04) Adding the DejaVu Serif font to the project.
-- (08-13) Adding a responsive top navigation bar.
+- (08-26) Adding a top navigation bar to all pages.
 
 ## About the fonts used
 
