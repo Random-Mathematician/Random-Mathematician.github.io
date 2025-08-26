@@ -1,21 +1,24 @@
 const nav = document.getElementsByTagName("nav")[0];
 const buttons = document.querySelectorAll("nav button");
+const openDropdowns = () => document.querySelectorAll("nav .dropdown:not(.hidden)");
 
 for (let but of buttons) {
-    const dropdown = but.nextElementSibling
+    const toggled = but.nextElementSibling
     but.addEventListener("click", event => {
-        if (dropdown.classList.contains("hidden")) {
-            dropdown.classList.remove("hidden");
+        if (toggled.classList.contains("hidden")) {
+            for (let drop of openDropdowns()) {
+                drop.classList.add("hidden");
+            }
+            toggled.classList.remove("hidden");
         } else {
-            dropdown.classList.add("hidden");
+            toggled.classList.add("hidden");
         }
         event.stopPropagation();
     });
 }
 
-window.addEventListener("click", event => {
-    const dropdowns = document.querySelectorAll("nav .dropdown:not(.hidden)");
-    for (let drop of dropdowns) {
+window.addEventListener("click", () => {
+    for (let drop of openDropdowns()) {
         drop.classList.add("hidden");
     }
-})
+});
