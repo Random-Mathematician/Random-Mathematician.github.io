@@ -45,6 +45,9 @@ h2, h3, h4 {
     margin-bottom: 10px;
 }
 
+.hidden {display: none !important;}
+
+/* Top Navigation Bar */
 nav {
     position: fixed;
     top: 0;
@@ -109,6 +112,7 @@ nav .dropdown a:hover {
     background-color: #CDCEDF;
 }
 
+/* Table of Contents */
 .conttable {
     background-color: var(--stBlue);
     border: 1px solid var(--stWhite);
@@ -119,8 +123,6 @@ nav .dropdown a:hover {
 
 .conttable h3 {margin: 15px 5px;}
 .conttable ol {margin-top: 0px;}
-
-.hidden {display: none !important;}
 
 /* Tables */
 table {
