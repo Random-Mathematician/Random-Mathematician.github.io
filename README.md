@@ -29,10 +29,9 @@ Finally, some other files are present to make the website work:
 ## Known issues and bugs
 
 If something is wrong with the page, it should be listed below. That way, it can be fixed earlier.
-1. The page is under construction.
-    > Can't have bugs if you're blank!
+1. The top navigation bar clips into the page on devices less than 375px wide.
 
-If you find any mistakes not on this list, be sure to contact me through my GitHub.
+If you find any mistakes not on this list, be sure to add it to issues.
 
 ## To-Do list
 
@@ -52,7 +51,7 @@ What has already been done:
 - (07-29) Writing this README.
 - (07-31) Redoing the formatting for tags and variables.
 - (08-04) Adding the DejaVu Serif font to the project.
-- (08-26) Adding a top navigation bar to all pages.
+- (08-26) Adding a responsive top navigation bar to all pages.
 
 ## About the fonts used
 
