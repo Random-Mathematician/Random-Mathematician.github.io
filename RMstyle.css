@@ -77,7 +77,7 @@ nav .nav-buttons {
     margin-right: 10px;
 }
 
-nav .nav-buttons div {
+nav .nav-buttons > div {
     position: relative;
 }
 
@@ -87,17 +87,18 @@ nav .nav-buttons button {
     border: none;
     color: inherit;
     background-color: inherit;
+    cursor: pointer;
 }
 
 nav .nav-buttons button:hover {
     background-color: var(--stBlue);
-    cursor: pointer;
 }
 
 nav .dropdown {
     background-color: var(--stWhite);
     position: absolute;
     z-index: 2;
+    width: 100%;
 }
 
 nav .dropdown a {
