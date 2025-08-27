@@ -145,4 +145,5 @@ function responsive() {
     // Not gonna take the time to redo this for extremally small devices
 }
 
-window.addEventListener("resize", responsive)
+window.addEventListener("resize", responsive);
+window.addEventListener("load", responsive);
