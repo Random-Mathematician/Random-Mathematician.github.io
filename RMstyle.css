@@ -24,9 +24,12 @@ body {
     color: var(--stWhite);
     font-family: sans-serif;
     margin: 0px;
+    position: relative;
 }
 
-main {margin: 60px 8px 0px 8px;}
+main {
+    margin: 60px 8px 0px 8px;
+}
 
 h1, h2, h3, h4 {
     color: var(--stWhite);
@@ -114,6 +117,47 @@ nav .dropdown a:hover {
     background-color: #CDCEDF;
 }
 
+/* Footer */
+
+footer {
+    background-color: #7f7f8f;
+    min-height: 100px;
+
+    display: flex;
+    justify-content: space-evenly;
+    color: black;
+    padding: 10px 0px;
+    box-sizing: border-box;
+}
+
+footer > div {
+    text-align: center;
+    margin: auto 0;
+}
+
+@media screen and (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+    
+    footer > div {
+        width: 90% !important; /* It is normally specified by JS */
+        text-align: start;
+    }
+
+    footer img {
+        width: 40px;
+        margin: 5px 5px 5px 0px;
+        vertical-align: middle;
+    }
+
+    footer br {display:none;}
+}
+
+footer a:link, footer a:visited {color: black;}
+footer a:hover {color: var(--stBlue);}
+
 /* Table of Contents */
 .conttable {
     background-color: var(--stBlue);
@@ -152,10 +196,10 @@ th, td {padding: 2px 7px;}
 } 
 
 /* Links */
-a:link:not(nav a) {color: var(--stWhite);}
-a:visited:not(nav a) {color:#BEBECA;}
-a:hover:not(nav a) {color:#9999A5;}
-a:active:not(nav a) {color:#7F7FFF;}
+a:link:not(nav a, footer a) {color: var(--stWhite);}
+a:visited:not(nav a, footer a) {color:#BEBECA;}
+a:hover:not(nav a, footer a) {color:#9999A5;}
+a:active:not(nav a, footer a) {color:#7F7FFF;}
 
 /* Special information */
 var {

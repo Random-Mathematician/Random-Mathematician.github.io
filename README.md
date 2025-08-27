@@ -52,6 +52,7 @@ What has already been done:
 - (07-31) Redoing the formatting for tags and variables.
 - (08-04) Adding the DejaVu Serif font to the project.
 - (08-26) Adding a responsive top navigation bar to all pages.
+- (08-27) Adding a footer to all pages.
 
 ## About the fonts used
 
