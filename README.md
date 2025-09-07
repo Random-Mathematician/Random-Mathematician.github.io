@@ -1,4 +1,4 @@
-# <img src="icon.png" alt="[Logo]" style="vertical-align:middle"> Random-Mathematician's Github web page. 
+# <img src="/general/icon.png" alt="[Logo]" style="vertical-align:middle"> Random-Mathematician's Github web page. 
 
 The purpose of this site mixes miscellaneous resources with mathematics and coding articles which would be harder to publish regularly or not be sufficiently complete for a full publication. It also stores reference pages, so that specific information could be accessed directly from the website, without needing to search for it.
 
