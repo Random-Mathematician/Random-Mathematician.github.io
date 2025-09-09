@@ -1,7 +1,7 @@
 const topNavBar = document.createElement("nav");
 topNavBar.innerHTML = `
 <a href="/" class="nav-icon">
-  <img alt="Main Page" src="/general/icon.png" width="40px"> Main Page
+  <img alt="Main Page" src="general/icon.png" width="40px"> Main Page
 </a>
 <div class="nav-buttons">
   <div>
@@ -13,7 +13,7 @@ topNavBar.innerHTML = `
   <div>
     <button>Programming &amp; Experiments <i class="fa fa-caret-down"></i></button>
     <div class="dropdown hidden">
-      <a href="/programming/HTMLtaglog.html">HTML & CSS reference</a>
+      <a href="programming/HTMLtaglog.html">HTML & CSS reference</a>
     </div>
   </div>
   <div>
@@ -125,7 +125,7 @@ function responsive() {
     document.querySelector("main").style.minHeight = innerHeight - 60 -
         footer.offsetHeight + "px";
     let caret = '<i class="fa fa-caret-down"></i>'
-    let logo = `<img alt="Main Page" src="/general/icon.png" width="40px">`
+    let logo = `<img alt="Main Page" src="general/icon.png" width="40px">`
     if (window.innerWidth > 790) {
         navButtons[0].innerHTML = "Higher Mathematics " + caret;
         navButtons[1].innerHTML = "Programming & Experiments " + caret;
