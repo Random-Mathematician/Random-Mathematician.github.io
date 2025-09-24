@@ -19,7 +19,7 @@ topNavBar.innerHTML = `
   <div>
     <button>Miscellaneous Resources <i class="fa fa-caret-down"></i></button>
     <div class="dropdown hidden">
-      <a href="#">Nothing here yet...</a>
+      <a href="/resources/clock.html">Clock</a>
     </div>
   </div>
 </div>`;

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clock</title>
+    <base href="Playground/Random-Mathematician.github.io/">
+    <link rel="icon" href="/general/icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/general/RMstyle.css">
+    <style>
+      #clock {font-size: 7vw; margin-bottom: 5px;}
+      #spacer {height: calc(40vh - 2.5em - 100px);}
+      #hint {text-align: center;}
+    </style>
+  </head>
+  <body>
+  <script src="/general/insertExtras.js"></script>
+  <main>
+    <div id="spacer"></div>
+    <h1 id="clock"></h1>
+    <p id="hint">Press space to toggle between only showing the clock and back.</p>
+  </main>
+  <script>insertFooter("github");</script>
+  <script defer>
+    const clk = document.getElementById("clock");
+    function update() {
+      let now = new Date();
+      clk.innerHTML = (now.getHours() + ":").padStart(3, "0");
+      clk.innerHTML += (now.getMinutes() + ":").padStart(3, "0");
+      clk.innerHTML += (now.getSeconds() + "").padStart(2, "0");
+    }
+
+    update();
+    setInterval(update, 1000);
+
+    const toHide = document.querySelectorAll("nav, footer");
+    let hidden = false;
+    function toggleHide() {
+      if (hidden) toHide.forEach(e => e.classList.remove("hidden"));
+      else toHide.forEach(e => e.classList.add("hidden"));
+      hidden = !hidden;
+    };
+
+    window.addEventListener("keydown", e => {
+      if (e.key = " ") {
+        if (hint = document.getElementById("hint")) {
+          document.querySelector("main").removeChild(hint);
+        }
+        toggleHide();
+      }
+    })
+    </script>
+  </body>
+</html>
