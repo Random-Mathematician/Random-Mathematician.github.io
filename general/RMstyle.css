@@ -25,9 +25,10 @@ body {
     font-family: sans-serif;
     margin: 0px;
     position: relative;
+    min-height: calc(100vh - 60px)
 }
 
-main {margin: 60px 8px 0px 8px;}
+main {margin: 8px 8px 0px 8px;}
 
 h1, h2, h3, h4 {
     color: var(--stWhite);
@@ -120,12 +121,13 @@ nav .dropdown a:hover {
 footer {
     background-color: #7f7f8f;
     min-height: 100px;
-
     display: flex;
     justify-content: space-evenly;
     color: black;
     padding: 10px 0px;
     box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
 }
 
 footer > div {

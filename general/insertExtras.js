@@ -1,7 +1,7 @@
 const topNavBar = document.createElement("nav");
 topNavBar.innerHTML = `
 <a href="/" class="nav-icon">
-  <img alt="Main Page" src="/general/icon.png" width="40px"> Main Page
+  <img alt="Main Page" src="/general/icon.png" width="40px" height="40px"> Main Page
 </a>
 <div class="nav-buttons">
   <div>
@@ -122,8 +122,6 @@ function insertFooter(...blocks) {
 function responsive() {
     const footer = document.querySelector("footer");
     footer.style.width = innerWidth + "px";
-    document.querySelector("main").style.minHeight = innerHeight - 60 -
-        footer.offsetHeight + "px";
     let caret = '<i class="fa fa-caret-down"></i>'
     let logo = `<img alt="Main Page" src="/general/icon.png" width="40px">`
     if (window.innerWidth > 790) {
@@ -146,4 +144,7 @@ function responsive() {
 }
 
 window.addEventListener("resize", () => setTimeout(responsive, 100));
-window.addEventListener("load", () => setTimeout(responsive, 100));
+window.addEventListener("load", () => {
+    document.querySelector("main").style.marginTop = "60px";
+    responsive()
+});
