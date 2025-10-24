@@ -71,10 +71,7 @@ nav .nav-icon {
     font-size: 14px;
 }
 
-nav img {
-    margin: 5px;
-    vertical-align: middle;
-}
+nav img {margin: 5px; vertical-align: middle;}
 
 nav .nav-buttons {
     display: flex;
@@ -82,9 +79,7 @@ nav .nav-buttons {
     margin-right: 10px;
 }
 
-nav .nav-buttons > div {
-    position: relative;
-}
+nav .nav-buttons > div {position: relative;}
 
 nav .nav-buttons button {
     height: 50px;
@@ -95,9 +90,7 @@ nav .nav-buttons button {
     cursor: pointer;
 }
 
-nav .nav-buttons button:hover {
-    background-color: var(--stBlue);
-}
+nav .nav-buttons button:hover {background-color: var(--stBlue);}
 
 nav .dropdown {
     background-color: var(--stWhite);
@@ -114,12 +107,9 @@ nav .dropdown a {
     text-align: center;
 }
 
-nav .dropdown a:hover {
-    background-color: #CDCEDF;
-}
+nav .dropdown a:hover {background-color: #CDCEDF;}
 
 /* Footer */
-
 footer {
     background-color: #7f7f8f;
     min-height: 100px;
@@ -166,7 +156,7 @@ footer a:hover {color: var(--stBlue);}
     border: 1px solid var(--stWhite);
     float: left;
     padding: 0px 5px 5px;
-    margin: 0px 20px 20px;
+    margin: 5px 20px 15px;
 }
 
 .conttable h3 {margin: 15px 5px;}
@@ -227,3 +217,26 @@ span.css {
     border-radius: 5px;
     color: #ffff7f;
 }
+
+/* Button Lists */
+.buttonlist {display: flex; margin: 0px 0px 10px 10px;}
+.buttonlist > div {margin: 0px 0px 0px 10px; padding: 0px;}
+
+.buttonlist button {
+    margin: 0px;
+    float: left;
+    padding: 3px 6px;
+    background-color: #0f204f;
+    border: none;
+    cursor: pointer;
+    color: #BEBECA;
+}
+
+.buttonlist .selected {
+    background-color: #2f204f;
+    color: var(--stWhite);
+    border: 1px solid var(--stWhite);
+}
+
+.buttonlist button:hover {background-color:#1f204f;}
+.buttonlist button:active {border:1px groove #9999A5;}
