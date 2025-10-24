@@ -47,6 +47,7 @@ What has already been done:
 - (08-26) Adding a responsive top navigation bar to all pages.
 - (08-27) Adding a footer to all pages.
 - (09-24) Fixing miscellaneous issues with displaying.
+- (09-30) Adding a clock page.
 
 ## About the fonts used
 
